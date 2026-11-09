@@ -4,612 +4,615 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>РЕДНО — По-малко рутина в работата · Пловдив</title>
-<meta name="description" content="Помагаме на фирми в Пловдив да оставят на AI досадната част от работата: офертите, фактурите, едни и същи имейли. За 30 дни и на цена, която знаете предварително.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314243B'/%3E%3Crect x='14' y='16' width='30' height='9' rx='4.5' fill='white'/%3E%3Crect x='14' y='29' width='22' height='9' rx='4.5' fill='white'/%3E%3Crect x='14' y='42' width='14' height='9' rx='4.5' fill='%230F766E'/%3E%3C/svg%3E">
+<meta name="description" content="Помагаме на фирми в Пловдив да оставят на AI досадната част от работата — офертите, фактурите, едни и същи имейли. За 30 дни и на цена, която знаете предварително.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101820'/%3E%3Crect x='14' y='16' width='30' height='9' rx='4.5' fill='%23F7F4EE'/%3E%3Crect x='14' y='29' width='22' height='9' rx='4.5' fill='%23F7F4EE'/%3E%3Crect x='14' y='42' width='14' height='9' rx='4.5' fill='%23C2410C'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script>document.documentElement.classList.add('js')</script>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#14243B; --navy2:#1E3350; --teal:#0F766E; --teal-l:#7DD3C8; --teal-bg:#E7F3F1;
-  --amber:#D97706; --amber-bg:#FDF3E6; --cream:#FBF8F3; --mist:#F2F5F9;
-  --slate:#334155; --grey:#4F5F70; --line:#E3E8EF; --r:20px;
+  --paper:#F7F4EE; --paper2:#EFEAE1; --ink:#101820; --ink2:#1B2733;
+  --body:#3B4653; --muted:#6B7684; --rule:#D9D2C5; --rule-dark:rgba(255,255,255,.16);
+  --accent:#C2410C; --accent-l:#E8875C; --teal:#0F766E;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--slate);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased;font-size:16px}
-h1,h2,h3,h4{font-family:'Golos Text','Inter',sans-serif;color:var(--navy);line-height:1.15;letter-spacing:-.02em}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--body);font-family:'Onest',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;color:var(--ink);line-height:1.08;letter-spacing:-.015em;font-weight:700}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.narrow{max-width:760px}
-.eyebrow{display:inline-block;font-size:13px;font-weight:600;color:var(--teal);margin-bottom:14px}
-.small{font-size:13.5px;color:var(--grey)}
-.hand{font-family:'Caveat',cursive;font-weight:600;color:var(--amber);font-size:24px;line-height:1.1}
+img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+.narrow{max-width:780px}
+.eyebrow{display:block;font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.lead{font-size:19.5px;color:var(--body)}
+.small{font-size:14px;color:var(--muted)}
+em{font-style:italic}
 
 /* header */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.25s}
-header.scrolled{border-color:var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo{display:flex;align-items:center;gap:11px;font-family:'Golos Text';font-weight:800;font-size:23px;color:var(--navy);letter-spacing:-.04em}
-.mark{width:28px;height:28px;display:flex;flex-direction:column;justify-content:space-between}
-.mark i{display:block;height:6.5px;border-radius:4px;background:var(--navy)}
-.mark i:nth-child(1){width:28px}.mark i:nth-child(2){width:20px}.mark i:nth-child(3){width:12px;background:var(--teal)}
-.nav-links{display:flex;gap:28px;font-size:15px;font-weight:500}
-.nav-links a:hover{color:var(--teal)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:12px;font-weight:600;font-size:15px;border:1.5px solid transparent;cursor:pointer;transition:.2s;white-space:nowrap;font-family:inherit}
-.btn-primary{background:var(--navy);color:#fff}
-.btn-primary:hover{background:var(--navy2);transform:translateY(-1px)}
-.btn-ghost{border-color:var(--line);color:var(--navy);background:#fff}
-.btn-ghost:hover{border-color:var(--navy)}
-.btn-amber{background:var(--amber);color:#fff}
-.btn-amber:hover{filter:brightness(.94);transform:translateY(-1px)}
-.burger{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer}
-.burger span{display:block;height:2px;background:var(--navy);margin:6px 0;border-radius:2px}
+header{position:fixed;top:0;left:0;right:0;z-index:60;padding:16px 0;transition:.3s}
+header.solid{background:rgba(247,244,238,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);padding:10px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display';font-weight:800;font-size:24px;color:#fff;letter-spacing:-.02em;transition:.3s}
+header.solid .logo{color:var(--ink)}
+.logo .mark{width:22px;height:22px;display:flex;flex-direction:column;justify-content:space-between}
+.logo .mark i{display:block;height:5px;border-radius:3px;background:currentColor}
+.logo .mark i:nth-child(1){width:22px}.logo .mark i:nth-child(2){width:15px}.logo .mark i:nth-child(3){width:9px;background:var(--accent)}
+.nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:500;color:#EDE7DC;transition:.3s}
+header.solid .nav-links{color:var(--body)}
+.nav-links a{position:relative;padding:4px 0}
+.nav-links a:after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:currentColor;transition:.25s}
+.nav-links a:hover:after{width:100%}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;font-family:'Onest';font-size:14.5px;font-weight:600;border:1px solid transparent;border-radius:2px;cursor:pointer;transition:.22s;white-space:nowrap}
+.btn-fill{background:var(--accent);color:#fff}
+.btn-fill:hover{background:#A83709}
+.btn-line{border-color:rgba(255,255,255,.45);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--ink2)}
+.btn-line-ink{border-color:var(--ink);color:var(--ink)}
+.btn-line-ink:hover{background:var(--ink);color:var(--paper)}
+header .btn{padding:11px 20px;font-size:14px}
+.burger{display:none;width:42px;height:38px;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;cursor:pointer;border-radius:2px}
+header.solid .burger{border-color:var(--rule);color:var(--ink)}
+.burger span{display:block;width:18px;height:1.5px;background:currentColor;margin:3.5px auto}
 
 /* hero */
-.hero{padding:76px 0 64px;background:linear-gradient(180deg,var(--cream),#fff)}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
-.hero h1{font-size:clamp(38px,4.8vw,60px);font-weight:800}
-.hero h1 em{font-style:normal;color:var(--teal)}
-.hero .sub{margin:24px 0 32px;font-size:19px;color:var(--grey);max-width:540px}
-.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
-.hero-note{margin-top:18px;font-size:14px;color:var(--grey)}
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;padding:140px 0 0;color:#fff;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(9,13,18,.78) 0%,rgba(9,13,18,.45) 42%,rgba(9,13,18,.86) 100%)}
+.hero-in{width:100%;padding-bottom:0}
+.hero h1{color:#fff;font-size:clamp(42px,6.4vw,86px);font-weight:700;max-width:15ch;margin-bottom:26px}
+.hero h1 em{color:var(--accent-l);font-weight:500}
+.hero .sub{color:#DCD5C8;font-size:19px;max-width:52ch;margin-bottom:34px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:54px}
+.hero-bar{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.22)}
+.hero-bar div{padding:22px 0 26px;border-right:1px solid rgba(255,255,255,.16);padding-right:24px}
+.hero-bar div:last-child{border:0}
+.hero-bar b{display:block;font-family:'Playfair Display';font-size:26px;font-weight:700;color:#fff;margin-bottom:2px}
+.hero-bar span{font-size:13.5px;color:#C8C1B4}
 
-.mock{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 70px rgba(20,36,59,.12);overflow:hidden}
-.mock-bar{display:flex;align-items:center;gap:8px;padding:13px 16px;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--grey)}
-.mock-bar .live{width:8px;height:8px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 4px rgba(34,197,94,.15)}
-.mock-body{padding:18px}
-.msg{display:flex;gap:10px;margin-bottom:12px}
-.av{width:30px;height:30px;border-radius:50%;background:#CBD5E1;color:var(--navy);font-size:11px;display:grid;place-items:center;font-weight:700;flex:none}
-.av.ai{background:var(--teal);color:#fff}
-.bub{background:var(--mist);border-radius:14px;padding:10px 13px;font-size:13.5px;line-height:1.5}
-.bub.me{background:#fff;border:1px solid var(--line)}
-.bub small{display:block;font-size:11px;color:var(--teal);font-weight:600;margin-bottom:4px}
-.file{display:flex;justify-content:space-between;border:1px solid var(--line);border-radius:10px;padding:8px 11px;margin-top:8px;font-size:12px;background:#fff}
-.file b{color:var(--navy)}
-.mock-foot{padding:0 18px 16px;font-size:12px;color:var(--grey);display:flex;gap:6px;align-items:center}
+/* sections */
+section{padding:110px 0}
+.sec-head{display:grid;grid-template-columns:120px 1fr;gap:0 40px;margin-bottom:56px;align-items:start}
+.sec-num{font-family:'Playfair Display';font-size:15px;color:var(--accent);padding-top:10px;border-top:1px solid var(--ink);color:var(--ink);font-weight:600}
+.sec-num span{color:var(--accent)}
+.sec-head h2{font-size:clamp(32px,4.2vw,54px);max-width:20ch;margin-bottom:16px}
+.sec-head p{font-size:18.5px;color:var(--body);max-width:60ch}
+.dark{background:var(--ink);color:#B9C2CC}
+.dark h2,.dark h3{color:#fff}
+.dark .sec-num{color:#fff;border-color:rgba(255,255,255,.5)}
+.dark .sec-head p{color:#A9B4BF}
+.dark .eyebrow{color:var(--accent-l)}
 
-/* promise strip */
-.promise{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.promise-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.promise-item{padding:24px 20px;border-right:1px solid var(--line);font-size:14.5px}
-.promise-item:last-child{border:0}
-.promise-item b{display:block;font-family:'Golos Text';color:var(--navy);font-size:17px;margin-bottom:2px}
+/* manifest numbers */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule)}
+.fact{padding:26px 26px 26px 0;border-right:1px solid var(--rule)}
+.fact:last-child{border:0}
+.fact b{display:block;font-family:'Playfair Display';font-size:clamp(38px,4.5vw,58px);color:var(--ink);line-height:1;margin-bottom:8px}
+.fact b i{font-style:normal;font-size:.45em;color:var(--muted);font-family:'Onest';font-weight:500}
+.fact span{font-size:15px;color:var(--body)}
 
-section{padding:96px 0}
-.head{max-width:700px;margin-bottom:44px}
-.head h2{font-size:clamp(30px,3.5vw,44px);font-weight:800;margin-bottom:14px}
-.head p{font-size:18px;color:var(--grey)}
-.center{text-align:center;margin-left:auto;margin-right:auto}
-.bg-cream{background:var(--cream)}
-.bg-navy{background:var(--navy);color:#C9D5E3}
-.bg-navy h2,.bg-navy h3{color:#fff}
-.bg-navy .head p{color:#AFC0D2}
+/* photo duo */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--ink)}
+.duo figure{position:relative;overflow:hidden}
+.duo img{width:100%;height:520px;object-fit:cover;filter:saturate(.92)}
+.duo figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 34px 28px;background:linear-gradient(transparent,rgba(9,13,18,.9));color:#fff}
+.duo figcaption b{display:block;font-family:'Playfair Display';font-size:24px;margin-bottom:4px}
+.duo figcaption span{font-size:14.5px;color:#C6BFB2}
 
-/* familiar */
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.quote{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;position:relative}
-.quote q{display:block;font-family:'Golos Text';font-size:18px;font-weight:600;color:var(--navy);line-height:1.35;quotes:"„" "“";margin-bottom:10px}
-.quote p{font-size:14.5px;color:var(--grey)}
-.quote .t{position:absolute;top:20px;right:22px;font-size:12px;font-weight:600;color:var(--amber);background:var(--amber-bg);padding:3px 9px;border-radius:999px}
+/* before after */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.ba h3{font-size:22px;margin-bottom:22px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.ba h3 span{font-family:'Onest';font-size:13px;font-weight:600;padding:4px 10px;border-radius:2px}
+.ba-before h3 span{background:#F0DDD6;color:#9A3412}
+.ba-after h3 span{background:#D8EAE6;color:var(--teal)}
+.ba-row{display:grid;grid-template-columns:58px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--rule);font-size:15.5px}
+.ba-row b{font-family:'Playfair Display';color:var(--ink);font-size:15px;font-weight:700}
+.ba-total{margin-top:20px;padding-top:16px;border-top:2px solid var(--ink);font-family:'Playfair Display';font-size:20px;color:var(--ink)}
 
-/* before / after */
-.ba{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.ba-col{border-radius:var(--r);padding:30px}
-.ba-before{background:#fff;border:1px solid var(--line)}
-.ba-after{background:var(--teal-bg);border:1px solid #C5E3DE}
-.ba-col h3{font-size:20px;margin-bottom:18px;display:flex;align-items:center;gap:10px}
-.ba-col h3 span{font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px}
-.ba-before h3 span{background:#FDECEC;color:#B42318}
-.ba-after h3 span{background:#fff;color:var(--teal)}
-.ba-row{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:11px 0;border-top:1px dashed var(--line);font-size:14.5px}
-.ba-after .ba-row{border-color:#C5E3DE}
-.ba-row b{font-family:'Golos Text';color:var(--navy);font-size:14px}
-.ba-sum{margin-top:16px;font-weight:600;color:var(--navy);font-size:15px}
-
-/* calculator */
-.calc{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(20,36,59,.06)}
-.calc-in{padding:34px}
-.calc-out{padding:34px;background:var(--navy);color:#C9D5E3;display:flex;flex-direction:column;justify-content:center}
-.calc-field{margin-bottom:24px}
-.calc-field label{display:flex;justify-content:space-between;font-size:14.5px;font-weight:600;color:var(--navy);margin-bottom:10px}
-.calc-field label output{color:var(--teal);font-family:'Golos Text';font-size:16px}
-input[type=range]{width:100%;accent-color:var(--teal);height:6px;cursor:pointer}
-.calc-out .big{font-family:'Golos Text';font-size:clamp(40px,5vw,56px);font-weight:800;color:#fff;line-height:1;letter-spacing:-.03em}
-.calc-out .lbl{font-size:14px;margin:8px 0 22px}
-.calc-out .row{display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid rgba(255,255,255,.12);font-size:14.5px}
-.calc-out .row b{color:#fff}
-.calc-out .note{font-size:12.5px;color:#8FA3B8;margin-top:16px}
+/* calc */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(255,255,255,.16)}
+.calc-in{padding:44px}
+.calc-out{padding:44px;background:rgba(255,255,255,.04);border-left:1px solid rgba(255,255,255,.16);display:flex;flex-direction:column;justify-content:center}
+.calc-f{margin-bottom:30px}
+.calc-f label{display:flex;justify-content:space-between;align-items:baseline;font-size:15px;color:#D6DEE6;margin-bottom:14px}
+.calc-f output{font-family:'Playfair Display';font-size:22px;color:var(--accent-l);font-weight:700}
+input[type=range]{-webkit-appearance:none;width:100%;height:2px;background:rgba(255,255,255,.28);cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--accent);border:3px solid var(--ink);box-shadow:0 0 0 1px var(--accent)}
+.calc-out .big{font-family:'Playfair Display';font-size:clamp(44px,5.4vw,66px);color:#fff;line-height:1;font-weight:700}
+.calc-out .lbl{font-size:15px;color:#A9B4BF;margin:10px 0 26px}
+.calc-out .row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid rgba(255,255,255,.12);font-size:15px}
+.calc-out .row b{color:#fff;font-weight:600;text-align:right}
 
 /* letter */
-.letter{display:grid;grid-template-columns:220px 1fr;gap:44px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:24px;padding:44px}
-.portrait{width:220px;height:260px;border-radius:18px;background:linear-gradient(160deg,var(--teal-bg),var(--mist));display:grid;place-items:center;color:var(--grey);font-size:13px;text-align:center;padding:20px;border:1px dashed #C5D3E0}
-.letter h2{font-size:30px;margin-bottom:18px}
-.letter p{font-size:16.5px;margin-bottom:14px;color:var(--slate)}
-.letter .sign{margin-top:20px}
-.letter .sign .hand{font-size:32px;color:var(--navy)}
+.letter{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:start}
+.letter p{font-size:18px;margin-bottom:18px}
+.letter .sig{margin-top:30px;padding-top:22px;border-top:1px solid var(--rule)}
+.letter .sig b{font-family:'Playfair Display';font-size:26px;color:var(--ink);font-style:italic;display:block}
+.letter .sig span{font-size:14px;color:var(--muted)}
+.letter .pic{margin-top:10px}
+.letter .pic img{width:100%;height:380px;object-fit:cover}
 
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px}
-.step .n{width:34px;height:34px;border-radius:10px;background:var(--teal-bg);color:var(--teal);font-family:'Golos Text';font-weight:800;display:grid;place-items:center;margin-bottom:14px}
-.step .when{font-size:12.5px;font-weight:600;color:var(--amber);margin-bottom:4px}
-.step h3{font-size:18px;margin-bottom:8px}
-.step p{font-size:14.5px;color:var(--grey)}
-.guarantee{margin-top:24px;display:flex;gap:18px;align-items:center;background:var(--amber-bg);border:1px solid #F3D9B5;border-radius:var(--r);padding:22px 26px}
-.guarantee .ic{font-size:30px;flex:none}
-.guarantee b{color:var(--navy);font-family:'Golos Text';font-size:17px}
-.guarantee p{font-size:14.5px;color:var(--slate)}
+/* process rows */
+.rows{border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:70px 190px 1fr;gap:24px;padding:26px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.row .n{font-family:'Playfair Display';font-size:20px;color:var(--accent)}
+.row .when{font-size:13.5px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.row h3{font-size:21px;margin-bottom:4px}
+.row p{font-size:15.5px;color:var(--body);max-width:62ch}
+.guarantee{margin-top:44px;border-left:3px solid var(--accent);padding:24px 26px;background:var(--paper2);color:var(--body)}
+.dark .rows{border-top-color:rgba(255,255,255,.28)}
+.dark .row{border-bottom-color:rgba(255,255,255,.16)}
+.dark .row .when{color:#9BA9B7}
+.dark .row p{color:#C3CCD5}
+.dark .guarantee b{color:var(--ink)}
+.dark .guarantee p{color:#3B4653}
+.guarantee b{font-family:'Playfair Display';font-size:21px;color:var(--ink);display:block;margin-bottom:6px}
+.guarantee p{font-size:15.5px;max-width:70ch}
 
-/* pricing */
-.prices{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.price{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;transition:.25s}
-.price:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(20,36,59,.08)}
-.prices{padding-top:12px}
-.price.pop{border-color:var(--teal);box-shadow:0 0 0 1px var(--teal);position:relative}
-.price.pop:before{content:"Повечето започват оттук";position:absolute;top:-12px;left:22px;background:var(--teal);color:#fff;font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:999px}
-.price h3{font-size:18px;margin-bottom:4px}
-.price .for{font-size:13.5px;color:var(--grey);margin-bottom:16px;min-height:42px}
-.price .amt{font-family:'Golos Text';font-size:30px;font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1}
-.price .per{font-size:13px;color:var(--grey);margin:4px 0 16px}
-.price ul{list-style:none;font-size:14px;flex:1}
-.price li{padding:6px 0 6px 22px;position:relative}
-.price li:before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:700}
-.mkt{margin-top:22px;display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;background:var(--navy);border-radius:var(--r);padding:30px 34px;color:#AFC0D2}
-.mkt h3{color:#fff;font-size:22px;margin-bottom:8px}
-.mkt p{font-size:15px}
-.mkt-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.mkt-tier{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px;text-align:center}
-.mkt-tier b{display:block;color:#fff;font-family:'Golos Text';font-size:19px}
-.mkt-tier span{font-size:11.5px}
+/* prices */
+.plist{border-top:1px solid var(--ink)}
+.prow{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--rule);align-items:start}
+.prow:hover{background:rgba(255,255,255,.5)}
+.prow h3{font-size:24px;margin-bottom:4px}
+.prow .desc{font-size:15px;color:var(--body);max-width:44ch}
+.prow ul{list-style:none;font-size:14.5px;color:var(--body)}
+.prow li{padding:3px 0 3px 16px;position:relative}
+.prow li:before{content:"—";position:absolute;left:0;color:var(--accent)}
+.prow .price{text-align:right}
+.prow .amt{font-family:'Playfair Display';font-size:32px;color:var(--ink);line-height:1.1;font-weight:700}
+.prow .per{font-size:13.5px;color:var(--muted)}
+.prow.star{background:var(--ink);color:#C9D2DB;padding:28px 26px;border:0}
+.prow.star h3,.prow.star .amt{color:#fff}
+.prow.star .desc,.prow.star li{color:#B9C2CC}
+.prow.star .per{color:#9AA6B2}
+.star-tag{display:inline-block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-l);border:1px solid var(--accent-l);padding:3px 8px;margin-bottom:10px}
 
-/* industries */
-.inds{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.ind{border:1px solid rgba(255,255,255,.13);border-radius:16px;padding:22px;background:rgba(255,255,255,.04)}
-.ind h3{font-size:17px;margin-bottom:6px}
-.ind p{font-size:14px;color:#AFC0D2}
+/* misc grids */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;border-top:1px solid var(--rule);padding-top:34px}
+.three h3{font-size:20px;margin-bottom:8px}
+.three p{font-size:15.5px}
+.industries{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
+.ind{display:grid;grid-template-columns:1fr auto;gap:18px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.14);align-items:baseline}
+.ind b{font-family:'Playfair Display';font-size:19px;color:#fff;font-weight:600}
+.ind span{font-size:14.5px;color:#A9B4BF;text-align:right;max-width:32ch}
 
-/* data */
-.data{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.data-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px}
-.data-item .tag{display:inline-block;font-size:12px;font-weight:600;color:var(--teal);background:var(--teal-bg);padding:3px 10px;border-radius:999px;margin-bottom:12px}
-.data-item h3{font-size:18px;margin-bottom:6px}
-.data-item p{font-size:14.5px;color:var(--slate)}
-
-/* not for */
-.fit{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
-.fit-col{border-radius:var(--r);padding:28px;border:1px solid var(--line);background:#fff}
-.fit-col h3{font-size:19px;margin-bottom:14px}
-.fit-col ul{list-style:none}
-.fit-col li{padding:10px 0 10px 28px;position:relative;font-size:15px;line-height:1.5;border-top:1px dashed var(--line)}
-.fit-col li:first-child{border:0}
-.fit-yes li:before{content:"✓";position:absolute;left:0;top:10px;color:var(--teal);font-weight:800}
-.fit-no li:before{content:"✕";position:absolute;left:0;top:10px;color:#B42318;font-weight:800}
+/* fit */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--ink)}
+.fit > div{padding:34px 34px 34px 0}
+.fit > div + div{border-left:1px solid var(--rule);padding-left:44px}
+.fit h3{font-size:21px;margin-bottom:16px}
+.fit ul{list-style:none}
+.fit li{padding:11px 0 11px 26px;position:relative;font-size:16px;border-bottom:1px solid var(--rule)}
+.fit li:last-child{border:0}
+.fit-yes li:before{content:"+";position:absolute;left:0;color:var(--teal);font-weight:700;font-size:18px}
+.fit-no li:before{content:"−";position:absolute;left:0;color:var(--accent);font-weight:700;font-size:18px}
 
 /* faq */
-.faq{max-width:800px;margin:0 auto}
-details{border-bottom:1px solid var(--line);padding:20px 0}
-summary{cursor:pointer;list-style:none;font-family:'Golos Text';font-weight:600;font-size:17.5px;color:var(--navy);display:flex;justify-content:space-between;gap:20px;align-items:center}
+.faq{border-top:1px solid var(--ink);max-width:900px}
+details{border-bottom:1px solid var(--rule)}
+summary{cursor:pointer;list-style:none;padding:22px 0;font-family:'Playfair Display';font-size:20px;color:var(--ink);display:flex;justify-content:space-between;gap:24px;align-items:baseline;font-weight:600}
 summary::-webkit-details-marker{display:none}
-summary:after{content:"+";font-size:24px;color:var(--teal);font-weight:400;transition:.2s;line-height:1}
-details[open] summary:after{transform:rotate(45deg)}
-details p{margin-top:12px;font-size:15.5px;color:var(--grey);max-width:700px}
+summary:after{content:"+";font-family:'Onest';font-size:22px;color:var(--accent);font-weight:400;line-height:1}
+details[open] summary:after{content:"−"}
+details p{padding:0 0 24px;font-size:16px;color:var(--body);max-width:72ch}
 
 /* downloads */
-.dl{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.dl a{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;transition:.2s}
-.dl a:hover{border-color:var(--teal);transform:translateY(-2px)}
-.dl .ic{width:44px;height:44px;border-radius:11px;background:var(--teal-bg);color:var(--teal);display:grid;place-items:center;font-weight:800;font-size:11px;flex:none;font-family:'Golos Text'}
-.dl h3{font-size:16px;margin-bottom:2px}
-.dl p{font-size:13.5px;color:var(--grey)}
+.dl{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--rule)}
+.dl a{display:flex;gap:18px;padding:28px 28px 28px 0;border-bottom:1px solid var(--rule);transition:.2s}
+.dl a + a{border-left:1px solid var(--rule);padding-left:32px}
+.dl a:hover{padding-left:8px}
+.dl a + a:hover{padding-left:40px}
+.dl .ic{font-family:'Playfair Display';font-size:13px;color:var(--accent);border:1px solid var(--accent);padding:4px 7px;height:fit-content;flex:none}
+.dl h3{font-size:19px;margin-bottom:3px}
+.dl p{font-size:14.5px;color:var(--muted)}
 
 /* contact */
-.cta{background:var(--navy);border-radius:28px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
-.cta:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(15,118,110,.25);filter:blur(80px);right:-120px;top:-140px}
-.cta h2{color:#fff;font-size:clamp(28px,3.2vw,40px);font-weight:800;position:relative}
-.cta p{color:#AFC0D2;margin-top:14px;font-size:16.5px;position:relative}
-.cta .direct{margin-top:26px;position:relative;font-size:15px;color:#fff;line-height:1.9}
-.cta .direct a{border-bottom:1px solid rgba(255,255,255,.3)}
-form{position:relative;background:#fff;border-radius:18px;padding:24px}
-.field{margin-bottom:13px}
-.field label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:5px}
-.field input,.field textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:15px;color:var(--navy);background:#fff;resize:vertical}
-.field input:focus,.field textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(15,118,110,.12)}
+.contact{position:relative;color:#fff;padding:0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:640px}
+.contact-left{padding:96px 60px 96px 0}
+.contact-right{position:relative;display:flex;align-items:center;padding:60px 0 60px 60px}
+.contact h2{color:#fff;font-size:clamp(32px,4vw,50px);margin-bottom:20px}
+.contact .lead{color:#C3CCD5;font-size:18px;margin-bottom:26px}
+.contact .direct{font-size:16px;line-height:2;color:#E6EBF0}
+.contact .direct a{border-bottom:1px solid rgba(255,255,255,.35)}
+.contact .offer{display:inline-block;margin-top:24px;border:1px solid var(--accent-l);color:var(--accent-l);padding:10px 16px;font-size:14px}
+form{background:var(--paper);border:1px solid rgba(255,255,255,.2);padding:32px;width:100%;color:var(--body)}
+form h3{font-size:22px;margin-bottom:18px}
+.f{margin-bottom:16px}
+.f label{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.f input,.f textarea{width:100%;padding:12px 14px;border:1px solid var(--rule);background:#fff;font:inherit;font-size:15px;color:var(--ink);border-radius:2px}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(194,65,12,.12)}
 form .btn{width:100%}
-.form-note{font-size:12.5px;color:var(--grey);margin-top:10px;text-align:center}
-.success{display:none;text-align:center;padding:30px 10px}
-.success.show{display:block}
-.success .ok{width:48px;height:48px;border-radius:50%;background:var(--teal-bg);color:var(--teal);display:grid;place-items:center;margin:0 auto 12px;font-size:22px}
+.fnote{font-size:12.5px;color:var(--muted);margin-top:12px;text-align:center}
+.ok{display:none;text-align:center;padding:34px 8px}
+.ok.show{display:block}
+.ok b{font-family:'Playfair Display';font-size:22px;color:var(--ink);display:block;margin-bottom:6px}
 
 /* footer */
-footer{background:#0E1B2D;color:#8FA3B8;padding:52px 0 28px}
-.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.09)}
-.foot .logo{color:#fff;margin-bottom:12px}
-.foot .logo .mark i{background:#fff}.foot .logo .mark i:nth-child(3){background:var(--teal-l)}
-.foot p{font-size:14px;max-width:320px}
-.foot h4{color:#fff;font-size:13px;margin-bottom:12px}
-.foot ul{list-style:none;font-size:14px}
-.foot li{margin-bottom:8px}
-.foot a:hover{color:var(--teal-l)}
-.copy{padding-top:20px;display:flex;justify-content:space-between;font-size:12.5px;flex-wrap:wrap;gap:10px}
+footer{background:var(--ink);color:#8D99A5;padding:60px 0 30px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:44px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer .logo{color:#fff;margin-bottom:14px;font-size:22px}
+footer p{max-width:34ch;line-height:1.7}
+footer h4{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+footer ul{list-style:none}
+footer li{margin-bottom:9px}
+footer a:hover{color:#fff}
+.fbot{padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px}
 
-.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-.js .reveal.in{opacity:1;transform:none}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
 
-@media(max-width:980px){
-  .hero-grid,.calc,.letter,.cta,.mkt{grid-template-columns:1fr}
-  .letter{padding:32px}
-  .portrait{width:100%;height:160px}
-  .promise-grid{grid-template-columns:repeat(2,1fr)}
-  .promise-item:nth-child(2){border-right:0}
-  .promise-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .quotes,.inds,.data{grid-template-columns:repeat(2,1fr)}
-  .steps,.prices{grid-template-columns:repeat(2,1fr)}
-  .cta{padding:40px}
-  .foot{grid-template-columns:1fr 1fr}
+@media(max-width:1000px){
+  .sec-head{grid-template-columns:1fr;gap:14px}
+  .sec-num{border:0;padding:0}
+  .facts,.three{grid-template-columns:1fr 1fr}
+  .fact:nth-child(2){border-right:0}
+  .duo{grid-template-columns:1fr}
+  .duo img{height:360px}
+  .ba,.two,.letter,.calc,.contact-grid,.fit,.dl,.industries{grid-template-columns:1fr;gap:34px}
+  .letter .pic{order:-1}
+  .contact-left{padding:70px 0 40px}
+  .contact-right{padding:0 0 70px}
+  .row{grid-template-columns:50px 1fr;gap:10px}
+  .row .when{grid-column:2}
+  .row h3{grid-column:2}
+  .row p{grid-column:2}
+  .prow{grid-template-columns:1fr;gap:12px}
+  .prow .price{text-align:left}
+  .ind{grid-template-columns:1fr}
+  .ind span{text-align:left}
+  .fit > div + div{border-left:0;border-top:1px solid var(--rule);padding-left:0;padding-top:34px}
 }
 @media(max-width:720px){
-  section{padding:68px 0}
-  .nav-links{position:fixed;inset:70px 0 auto;background:#fff;flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line);transform:translateY(-140%);transition:.3s}
-  .nav-links.open{transform:none}
+  body{font-size:16px}
+  section{padding:72px 0}
+  .nav-links{position:fixed;top:64px;left:0;right:0;background:var(--paper);flex-direction:column;padding:24px 28px;gap:16px;color:var(--ink);border-bottom:1px solid var(--rule);display:none}
+  .nav-links.open{display:flex}
   .nav .btn{display:none}
   .burger{display:block}
-  .quotes,.inds,.data,.steps,.prices,.ba,.fit,.dl,.mkt-tiers{grid-template-columns:1fr}
-  .cta{padding:28px;border-radius:22px}
-  .calc-in,.calc-out{padding:26px}
-  .foot{grid-template-columns:1fr;gap:26px}
-  .hero{padding:50px 0 46px}
+  .hero{min-height:88vh;padding-top:110px}
+  .hero-bar{grid-template-columns:1fr;border-top:0}
+  .hero-bar div{border-right:0;border-top:1px solid rgba(255,255,255,.2);padding:14px 0}
+  .hero-cta .btn{width:100%}
+  .facts,.three{grid-template-columns:1fr}
+  .fact{border-right:0;border-bottom:1px solid var(--rule)}
+  form{padding:22px}
 }
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
 <header id="hdr">
   <div class="wrap nav">
-    <a href="#top" class="logo" aria-label="РЕДНО — начало"><span class="mark"><i></i><i></i><i></i></span>redno</a>
+    <a href="#top" class="logo"><span class="mark"><i></i><i></i><i></i></span>redno</a>
     <nav class="nav-links" id="menu">
-      <a href="#familiar">Какво правим</a>
-      <a href="#calc">Колко ще спестите</a>
+      <a href="#problem">Проблемът</a>
+      <a href="#calc">Сметката</a>
       <a href="#how">Как работим</a>
       <a href="#prices">Цени</a>
       <a href="#faq">Въпроси</a>
     </nav>
-    <a href="#contact" class="btn btn-primary">Да поговорим</a>
+    <a href="#contact" class="btn btn-fill">Да поговорим</a>
     <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <main id="top">
 
-<!-- HERO -->
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">За фирми в Пловдив и региона</span>
-      <h1>По-малко рутина.<br><em>Повече работа, която има значение.</em></h1>
-      <p class="sub">Офертите, фактурите, едни и същи имейли всеки ден — оставете ги на AI. Вашите хора се занимават с клиентите и с работата, която наистина движи фирмата. Правим го за 30 дни и цената я знаете от самото начало.</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn-amber">Искам безплатен разговор</a>
-        <a href="#calc" class="btn btn-ghost">Колко време губим?</a>
-      </div>
-      <p class="hero-note">30 минути, по телефона или на кафе. Няма да ви продаваме нищо на първата среща.</p>
+  <img src="img/office.jpg" alt="Екип в офис около маса с лаптопи и документи" fetchpriority="high">
+  <div class="wrap hero-in">
+    <h1>По-малко рутина.<br><em>Повече работа, която има значение.</em></h1>
+    <p class="sub">Офертите, фактурите, едни и същи имейли всеки ден. Оставете ги на AI и върнете на хората си времето за клиентите, за продажбите и за нещата, които никой софтуер не може да свърши.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-fill">Безплатен разговор</a>
+      <a href="#calc" class="btn btn-line">Колко време губим?</a>
     </div>
-
-    <div class="mock reveal" aria-hidden="true">
-      <div class="mock-bar"><span class="live"></span> Входяща поща · вторник, 08:12</div>
-      <div class="mock-body">
-        <div class="msg"><div class="av">ГП</div>
-          <div class="bub me">Здравейте, може ли оферта за 14-те артикула от приложения файл? Трябва ни до утре.</div></div>
-        <div class="msg"><div class="av ai">R</div>
-          <div class="bub"><small>Чернова за Мария · готова за 4 мин</small>
-            Офертата е готова. Цените са по договора ви с тях. Два от артикулите ги нямаме на склад — доставка до 3 дни, отбелязах го в офертата.
-            <div class="file"><span><b>oferta-118.pdf</b> · 14 позиции</span><span style="color:var(--teal);font-weight:600">Преглед</span></div></div></div>
-        <div class="msg"><div class="av">М</div>
-          <div class="bub me">Супер, проверих я. Пращай.</div></div>
-      </div>
-      <div class="mock-foot">🔒 Нищо не излиза без одобрение от човек</div>
+    <div class="hero-bar">
+      <div><b>30 дни</b><span>до първия работещ резултат</span></div>
+      <div><b>Фиксирана цена</b><span>знаете я, преди да подпишете</span></div>
+      <div><b>Без дълъг договор</b><span>спирате, когато решите</span></div>
     </div>
   </div>
 </section>
 
-<!-- PROMISES -->
-<div class="promise">
-  <div class="wrap promise-grid">
-    <div class="promise-item"><b>30 дни</b>до първия реален резултат</div>
-    <div class="promise-item"><b>Фиксирана цена</b>знаете я, преди да подпишете</div>
-    <div class="promise-item"><b>Данните са ваши</b>и остават при вас</div>
-    <div class="promise-item"><b>Без договор за години</b>спирате, когато решите</div>
+<section id="problem">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num"><span>01</span> — Проблемът</div>
+      <div>
+        <h2>Хората ви не са бавни. Просто вършат много неща на ръка.</h2>
+        <p>Не защото екипът е слаб, а защото процесът е счупен. Ето къде отиват часовете в една фирма с около 40 души.</p>
+      </div>
+    </div>
+    <div class="facts rv">
+      <div class="fact"><b>11<i> ч</i></b><span>седмично в писане на оферти, проверки на цени и преправяне.</span></div>
+      <div class="fact"><b>8<i> ч</i></b><span>седмично в преписване на фактури и сверяване на числа.</span></div>
+      <div class="fact"><b>6<i> ч</i></b><span>седмично в отговори на въпроси, които вече са написани някъде.</span></div>
+    </div>
+    <p class="small rv" style="margin-top:22px">Средни стойности при 15 € натоварена стойност на часа. Вашите числа ги мерим заедно на първата среща.</p>
   </div>
+</section>
+
+<div class="duo">
+  <figure class="rv">
+    <img src="img/warehouse.jpg" alt="Склад с високи стелажи и работник с таблет">
+    <figcaption><b>Поръчки по имейл и Viber</b><span>Проверка на наличности, потвърждения, товарителници.</span></figcaption>
+  </figure>
+  <figure class="rv">
+    <img src="img/desk.jpg" alt="Бюро с лаптоп, фактури, калкулатор и кафе">
+    <figcaption><b>Фактури и оферти всеки ден</b><span>Едни и същи документи, само числата са различни.</span></figcaption>
+  </figure>
 </div>
 
-<!-- FAMILIAR -->
-<section id="familiar">
+<section>
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Звучи ли ви познато?</span>
-      <h2>Хората ви не са бавни. Просто вършат много неща на ръка.</h2>
-      <p>Тези изречения се чуват в почти всеки офис. Ако разпознаете поне две от тях, значи можем да ви помогнем.</p>
-    </div>
-    <div class="quotes">
-      <div class="quote reveal"><span class="t">~11 ч седмично</span><q>Пак пиша същата оферта, само с други бройки.</q><p>Копиране от старата, проверка на цените, наличностите, PDF, имейл. И така по десет пъти на ден.</p></div>
-      <div class="quote reveal"><span class="t">~8 ч седмично</span><q>Фактурите ги въвежда Мария. Но Мария е в отпуск.</q><p>Някой преписва числа от PDF в счетоводната програма. Бавно е, а грешките излизат накрая на месеца.</p></div>
-      <div class="quote reveal"><span class="t">~6 ч седмично</span><q>Клиентът писа в 22:00. Отговорихме на другия ден по обяд.</q><p>Едни и същи въпроси — за цена, срок, работно време. Отговорите ги има, но някой трябва да ги напише.</p></div>
-      <div class="quote reveal"><span class="t">~5 ч седмично</span><q>Къде беше онзи договор от 2023?</q><p>Файлът е някъде — в пощата, в папка на десктопа или в Viber. Търсенето отнема повече от самата работа.</p></div>
-      <div class="quote reveal"><span class="t">~4 ч седмично</span><q>Шефе, колко продадохме този месец?</q><p>Отчетът се сглобява в Excel от три системи. Докато е готов, числата вече са стари.</p></div>
-      <div class="quote reveal"><span class="t">~3 ч седмично</span><q>Новият колега пита същото, което питаше и предишният.</q><p>Знанието е в главите на двама-трима души. Когато тях ги няма, всичко спира.</p></div>
-    </div>
-    <p class="small reveal" style="margin-top:18px">Часовете са средни за фирма с около 40 души. Вашите ги измерваме заедно на първата среща.</p>
-  </div>
-</section>
-
-<!-- BEFORE / AFTER -->
-<section class="bg-cream">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Преди и след</span>
-      <h2>Една сутрин в отдел „Продажби“.</h2>
-      <p>Хората са същите, работата е същата. Разликата е кой върши скучната част.</p>
+    <div class="sec-head rv">
+      <div class="sec-num"><span>02</span> — Преди и след</div>
+      <div>
+        <h2>Една сутрин в отдел „Продажби“.</h2>
+        <p>Хората са същите. Работата е същата. Разликата е кой върши скучната част.</p>
+      </div>
     </div>
     <div class="ba">
-      <div class="ba-col ba-before reveal">
+      <div class="ba-before rv">
         <h3>Сега <span>около 3 часа</span></h3>
-        <div class="ba-row"><b>08:30</b><span>Отваряте пощата. Чакат ви 23 нови имейла, а 9 от тях са запитвания за оферта.</span></div>
-        <div class="ba-row"><b>09:00</b><span>Пишете първата оферта. Търсите цените в Excel, а наличностите — в програмата.</span></div>
-        <div class="ba-row"><b>10:15</b><span>Звъни клиент, който пита дали сте получили имейла му отпреди 2 дни.</span></div>
-        <div class="ba-row"><b>11:30</b><span>Готови са 4 оферти от 9. Обедът тепърва предстои.</span></div>
-        <p class="ba-sum">Останалите 5 запитвания чакат до утре.</p>
+        <div class="ba-row"><b>08:30</b><span>23 нови имейла. Девет от тях са запитвания за оферта.</span></div>
+        <div class="ba-row"><b>09:00</b><span>Първата оферта. Цените се търсят в Excel, наличностите — в програмата.</span></div>
+        <div class="ba-row"><b>10:15</b><span>Звъни клиент, който пита дали сте получили имейла му отпреди два дни.</span></div>
+        <div class="ba-row"><b>11:30</b><span>Готови са 4 от 9 оферти. Обедът тепърва предстои.</span></div>
+        <div class="ba-total">Останалите 5 чакат до утре.</div>
       </div>
-      <div class="ba-col ba-after reveal">
+      <div class="ba-after rv">
         <h3>С РЕДНО <span>около 40 минути</span></h3>
-        <div class="ba-row"><b>08:30</b><span>Отваряте пощата. И 9-те оферти вече са подготвени като чернови, с цени и наличности.</span></div>
-        <div class="ba-row"><b>08:45</b><span>Преглеждате ги и при две оправяте отстъпката. Изпращате всичките.</span></div>
-        <div class="ba-row"><b>09:10</b><span>Клиентът от преди 2 дни вече има отговор — получил го е още същата вечер.</span></div>
-        <div class="ba-row"><b>09:15</b><span>Звъните на най-големия си клиент. Просто за да попитате как вървят нещата.</span></div>
-        <p class="ba-sum">Сутринта е свободна за работа, която носи пари.</p>
+        <div class="ba-row"><b>08:30</b><span>Деветте оферти вече са подготвени като чернови, с цени и наличности.</span></div>
+        <div class="ba-row"><b>08:45</b><span>Преглеждате ги, при две оправяте отстъпката и изпращате всичките.</span></div>
+        <div class="ba-row"><b>09:10</b><span>Клиентът от преди два дни има отговор — получил го е още същата вечер.</span></div>
+        <div class="ba-row"><b>09:15</b><span>Звъните на най-големия си клиент. Просто за да питате как вървят нещата.</span></div>
+        <div class="ba-total">Сутринта е свободна за работа, която носи пари.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CALCULATOR -->
-<section id="calc">
+<section id="calc" class="dark">
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Сметнете сами</span>
-      <h2>Колко ви струва рутината?</h2>
-      <p>Преместете плъзгачите. Сметката е груба, но обикновено хората се изненадват.</p>
+    <div class="sec-head rv">
+      <div class="sec-num"><span>03</span> — Сметката</div>
+      <div>
+        <h2>Колко ви струва рутината?</h2>
+        <p>Преместете плъзгачите. Сметката е груба, но обикновено хората се изненадват.</p>
+      </div>
     </div>
-    <div class="calc reveal">
+    <div class="calc rv">
       <div class="calc-in">
-        <div class="calc-field"><label for="cPeople">Колко души вършат офис работа? <output id="oPeople">8</output></label><input type="range" id="cPeople" min="1" max="60" value="8"></div>
-        <div class="calc-field"><label for="cHours">Часове седмично на човек за повтаряща се работа <output id="oHours">6</output></label><input type="range" id="cHours" min="1" max="20" value="6"></div>
-        <div class="calc-field"><label for="cRate">Колко струва един час работа на фирмата (€) <output id="oRate">12</output></label><input type="range" id="cRate" min="6" max="40" value="12"></div>
-        <p class="small">Броим само половината от тези часове — толкова реално може да поеме AI, без да обещаваме чудеса.</p>
+        <div class="calc-f"><label for="cPeople">Хора, които вършат офис работа <output id="oPeople">8</output></label><input type="range" id="cPeople" min="1" max="60" value="8"></div>
+        <div class="calc-f"><label for="cHours">Часове седмично на човек за повтарящи се задачи <output id="oHours">6</output></label><input type="range" id="cHours" min="1" max="20" value="6"></div>
+        <div class="calc-f"><label for="cRate">Колко струва часът работа на фирмата (€) <output id="oRate">12</output></label><input type="range" id="cRate" min="6" max="40" value="12"></div>
+        <p class="small" style="color:#8D99A5">Броим само половината от тези часове — толкова реално може да поеме AI, без да обещаваме чудеса.</p>
       </div>
       <div class="calc-out">
         <div class="big" id="rYear">0 €</div>
         <div class="lbl">губите годишно в работа, която може да се автоматизира</div>
         <div class="row"><span>Свободни часове на месец</span><b id="rHours">0 ч</b></div>
-        <div class="row"><span>Това са колко работни дни</span><b id="rDays">0</b></div>
+        <div class="row"><span>Това са работни дни</span><b id="rDays">0</b></div>
         <div class="row"><span>Първи проект (Бърз старт)</span><b>4 900 €</b></div>
         <div class="row"><span>Изплаща се за</span><b id="rPay">—</b></div>
-        <p class="note">Ориентировъчно, при 46 работни седмици. На първата среща ще го сметнем с вашите реални числа.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- LETTER -->
-<section class="bg-cream">
+<section>
+  <div class="wrap letter">
+    <div class="rv">
+      <span class="eyebrow">Две думи от мен</span>
+      <h2 style="font-size:clamp(30px,3.6vw,44px);margin-bottom:22px">Здравейте, аз съм Цецо.</h2>
+      <p>От години пиша софтуер и автоматизирам неща, които хората правят на ръка — от диагностика на автомобили до инструменти, с които сам работя всеки ден. Видях с очите си колко време изяждат скучните задачи и колко лесно изчезват, когато някой седне и ги подреди.</p>
+      <p>Започвам РЕДНО, защото повечето фирми в Пловдив чуват за изкуствения интелект само от новините — или е страшен, или е скъп. А всъщност той може да поеме офертите ви още следващия месец.</p>
+      <p>Няма да ви говоря за „дигитална трансформация“. Ще дойда, ще видя как работите и ще ви кажа честно какво си струва и какво — не.</p>
+      <div class="sig"><b>Цецо</b><span>Основател, РЕДНО · Пловдив</span></div>
+    </div>
+    <div class="pic rv"><img src="img/desk.jpg" alt="Бюро с документи и лаптоп"></div>
+  </div>
+</section>
+
+<section id="how" class="dark">
   <div class="wrap">
-    <div class="letter reveal">
-      <div class="portrait">Тук отива снимка<br>(истинска, не стокова)</div>
+    <div class="sec-head rv">
+      <div class="sec-num"><span>04</span> — Как работим</div>
       <div>
-        <span class="eyebrow">Две думи от мен</span>
-        <h2>Здравейте, аз съм Цецо.</h2>
-        <p>От години пиша софтуер и автоматизирам неща, които хората правят на ръка — от диагностика на автомобили до инструменти, с които сам работя всеки ден. Видях с очите си колко време изяждат скучните задачи и колко лесно могат да се махнат, когато някой седне и ги подреди.</p>
-        <p>Започвам РЕДНО, защото повечето фирми в Пловдив чуват за изкуствения интелект само от новините. Чуват колко е страшен или колко е скъп. А всъщност той може да поеме офертите ви още следващия месец.</p>
-        <p>Няма да ви говоря за „дигитална трансформация“. Ще дойда, ще видя как работите и ще ви кажа честно какво си струва да се автоматизира и какво — не. Ако не си струва, ще ви го кажа още на първата среща.</p>
-        <div class="sign"><div class="hand">Цецо</div><span class="small">Основател, РЕДНО · Пловдив</span></div>
+        <h2>От първия разговор до работещо решение — за около месец.</h2>
+        <p>От вас ще ни трябват 2–3 часа седмично. Не ви трябва IT отдел и не сменяте програмите, с които работите.</p>
       </div>
+    </div>
+    <div class="rows">
+      <div class="row rv"><div class="n">01</div><div class="when">Ден 1–2</div><div><h3>Идваме и гледаме</h3><p>Сядаме с хората, които вършат работата. Записваме какво правят и колко време им отнема.</p></div></div>
+      <div class="row rv"><div class="n">02</div><div class="when">Ден 3–5</div><div><h3>Казваме ви цената</h3><p>Избираме една задача, с която да започнем, и ви даваме точна цена, срок и очакван резултат.</p></div></div>
+      <div class="row rv"><div class="n">03</div><div class="when">Седмица 2–4</div><div><h3>Правим го</h3><p>Свързваме системите ви, учим AI на вашите документи и тестваме с реални случаи, преди да го пуснем.</p></div></div>
+      <div class="row rv"><div class="n">04</div><div class="when">Ден 30</div><div><h3>Мерим заедно</h3><p>Сравняваме преди и след. Ако резултатът е по-слаб от уговореното, продължаваме, докато го постигнем.</p></div></div>
+    </div>
+    <div class="guarantee rv">
+      <b>Ако не постигнем уговорения резултат — връщаме половината от парите.</b>
+      <p>Резултатът е записан в договора с числа, например „офертите се подготвят три пъти по-бързо“. Не е общо обещание.</p>
     </div>
   </div>
 </section>
 
-<!-- HOW -->
-<section id="how">
+<section id="prices">
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Как работим</span>
-      <h2>От първия разговор до работещо решение — за около месец.</h2>
-      <p>От вас ще ни трябват 2–3 часа седмично. Не ви трябва IT отдел и не сменяте програмите, с които работите.</p>
-    </div>
-    <div class="steps">
-      <div class="step reveal"><div class="n">1</div><div class="when">Ден 1–2</div><h3>Идваме и гледаме</h3><p>Сядаме с хората, които вършат работата. Записваме какво правят и колко време им отнема.</p></div>
-      <div class="step reveal"><div class="n">2</div><div class="when">Ден 3–5</div><h3>Казваме ви цената</h3><p>Избираме една задача, с която да започнем. Казваме ви точната цена, срока и какъв резултат да очаквате.</p></div>
-      <div class="step reveal"><div class="n">3</div><div class="when">Седмица 2–4</div><h3>Правим го</h3><p>Свързваме системите ви, учим AI на вашите документи и тестваме с реални случаи, преди да го пуснем.</p></div>
-      <div class="step reveal"><div class="n">4</div><div class="when">Ден 30</div><h3>Мерим заедно</h3><p>Сравняваме преди и след. Ако резултатът е по-слаб от уговореното, продължаваме да работим, докато го постигнем.</p></div>
-    </div>
-    <div class="guarantee reveal">
-      <div class="ic">🤝</div>
-      <div><b>Ако не постигнем уговорения резултат — връщаме половината от парите.</b>
-      <p>Резултатът е записан в договора с числа, например „офертите се подготвят 3 пъти по-бързо“. Не е общо обещание.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICES -->
-<section id="prices" class="bg-cream">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Цени</span>
-      <h2>Цената я знаете отпред. Без почасово таксуване.</h2>
-      <p>Започвате с малко, виждате резултата и чак тогава решавате дали да продължите.</p>
-    </div>
-    <div class="prices">
-      <div class="price reveal">
-        <h3>Преглед</h3><div class="for">Искате да разберете какво изобщо може да се автоматизира.</div>
-        <div class="amt">1 500 €</div><div class="per">еднократно · 5 дни</div>
-        <ul><li>Разглеждаме 5–8 задачи</li><li>Мерим колко време отиват</li><li>Сметка колко ще спестите</li><li>План за година напред</li></ul>
-      </div>
-      <div class="price pop reveal">
-        <h3>Бърз старт</h3><div class="for">Искате една задача да започне да се върши сама — още сега.</div>
-        <div class="amt">4 900 €</div><div class="per">еднократно · 3–4 седмици</div>
-        <ul><li>Една задача от начало до край</li><li>Обучаваме екипа ви</li><li>3 месеца поддръжка включени</li><li>Гаранция за резултат</li></ul>
-      </div>
-      <div class="price reveal">
-        <h3>Цялостно</h3><div class="for">Искате няколко отдела да работят свързано.</div>
-        <div class="amt">12–28 хил. €</div><div class="per">еднократно · 6–10 седмици</div>
-        <ul><li>3–6 свързани процеса</li><li>Връзка с ERP / CRM</li><li>Вътрешна база знания</li><li>Табло с резултатите</li></ul>
-      </div>
-      <div class="price reveal">
-        <h3>Поддръжка</h3><div class="for">Искате някой да го следи и подобрява след старта.</div>
-        <div class="amt">от 590 €</div><div class="per">на месец · без срок</div>
-        <ul><li>Следим да работи 24/7</li><li>Промени при нужда</li><li>Месечен отчет на човешки език</li><li>Спирате, когато решите</li></ul>
-      </div>
-    </div>
-
-    <div class="mkt reveal">
+    <div class="sec-head rv">
+      <div class="sec-num"><span>05</span> — Цени</div>
       <div>
-        <span class="eyebrow" style="color:var(--teal-l)">А маркетингът?</span>
-        <h3>Редовни публикации, без да наемате маркетолог.</h3>
-        <p>AI пише постовете, рекламите и имейлите във вашия стил. Вие ги преглеждате в понеделник за 30 минути и одобрявате с един клик. Нищо не се публикува без вас.</p>
-      </div>
-      <div class="mkt-tiers">
-        <div class="mkt-tier"><b>800 €</b><span>/мес. · 2 канала</span></div>
-        <div class="mkt-tier"><b>1 000 €</b><span>/мес. · 3 канала</span></div>
-        <div class="mkt-tier"><b>1 200 €</b><span>/мес. · + реклами</span></div>
+        <h2>Цената я знаете отпред.</h2>
+        <p>Без почасово таксуване и без изненади във фактурата. Започвате с малко, виждате резултата и чак тогава решавате дали да продължите.</p>
       </div>
     </div>
-    <p class="small reveal" style="margin-top:14px">Цените са без ДДС. Абонаментите за AI (обикновено 20–150 € месечно за малка фирма) се плащат отделно и виждате всеки цент.</p>
+    <div class="plist rv">
+      <div class="prow">
+        <div><h3>Преглед</h3><p class="desc">Искате да разберете какво изобщо може да се автоматизира.</p></div>
+        <ul><li>5–8 задачи</li><li>Измерено време</li><li>Сметка за спестяванията</li><li>План за година</li></ul>
+        <div class="price"><div class="amt">1 500 €</div><div class="per">еднократно · 5 дни</div></div>
+      </div>
+      <div class="prow star">
+        <div><span class="star-tag">Повечето започват оттук</span><h3>Бърз старт</h3><p class="desc">Искате една задача да започне да се върши сама — още сега.</p></div>
+        <ul><li>Една задача от край до край</li><li>Обучение на екипа</li><li>3 месеца поддръжка</li><li>Гаранция за резултат</li></ul>
+        <div class="price"><div class="amt">4 900 €</div><div class="per">3–4 седмици</div></div>
+      </div>
+      <div class="prow">
+        <div><h3>Цялостно</h3><p class="desc">Искате няколко отдела да работят свързано.</p></div>
+        <ul><li>3–6 свързани процеса</li><li>Връзка с ERP / CRM</li><li>База знания</li><li>Табло с резултати</li></ul>
+        <div class="price"><div class="amt">12–28 хил. €</div><div class="per">6–10 седмици</div></div>
+      </div>
+      <div class="prow">
+        <div><h3>Поддръжка</h3><p class="desc">Искате някой да го следи и подобрява след старта.</p></div>
+        <ul><li>Наблюдение 24/7</li><li>Промени при нужда</li><li>Месечен отчет</li><li>Без срок</li></ul>
+        <div class="price"><div class="amt">от 590 €</div><div class="per">на месец</div></div>
+      </div>
+    </div>
+    <div class="two rv" style="margin-top:56px;gap:44px">
+      <div>
+        <span class="eyebrow">А маркетингът?</span>
+        <h3 style="font-size:24px;margin-bottom:10px">Редовни публикации, без маркетолог на заплата.</h3>
+        <p>AI пише постовете, рекламите и имейлите във вашия стил. Вие ги преглеждате в понеделник за 30 минути и одобрявате с един клик.</p>
+      </div>
+      <div>
+        <div style="display:flex;gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+          <div style="flex:1;padding:16px 0"><b class="serif" style="font-size:22px;display:block;color:var(--ink)">800 €</b><span class="small">/мес. · 2 канала</span></div>
+          <div style="flex:1;padding:16px 0;border-left:1px solid var(--rule);padding-left:20px"><b class="serif" style="font-size:22px;display:block;color:var(--ink)">1 000 €</b><span class="small">/мес. · 3 канала</span></div>
+          <div style="flex:1;padding:16px 0;border-left:1px solid var(--rule);padding-left:20px"><b class="serif" style="font-size:22px;display:block;color:var(--ink)">1 200 €</b><span class="small">/мес. · + реклами</span></div>
+        </div>
+        <p class="small" style="margin-top:14px">Цените са без ДДС. Абонаментите за AI (обикновено 20–150 € месечно) се плащат отделно и виждате всеки цент.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- INDUSTRIES -->
-<section class="bg-navy">
+<section class="dark">
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow" style="color:var(--teal-l)">С кого работим</span>
-      <h2>Не започваме от нулата.</h2>
-      <p>За тези отрасли решенията вече са измислени и тествани. Само ги нагласяме за вас — затова става по-бързо и по-евтино.</p>
+    <div class="sec-head rv">
+      <div class="sec-num"><span>06</span> — Отрасли</div>
+      <div>
+        <h2>Не започваме от нулата.</h2>
+        <p>За тези отрасли решенията вече са измислени и тествани. Само ги нагласяме за вас — затова става по-бързо и по-евтино.</p>
+      </div>
     </div>
-    <div class="inds">
-      <div class="ind reveal"><h3>Производство</h3><p>Оферти, техническа документация, отчети за качество, наличности.</p></div>
-      <div class="ind reveal"><h3>Търговия на едро</h3><p>Поръчки по имейл и Viber, проверка на склада, потвърждения към клиента.</p></div>
-      <div class="ind reveal"><h3>Счетоводни къщи</h3><p>Сортиране на документи, вадене на данни от фактури, сверки.</p></div>
-      <div class="ind reveal"><h3>Транспорт и логистика</h3><p>ЧМР-и и митнически документи, проследяване, известия към клиентите.</p></div>
-      <div class="ind reveal"><h3>Имоти</h3><p>Отговор на всяко запитване, описания на обяви, напомняния.</p></div>
-      <div class="ind reveal"><h3>Хотели и ресторанти</h3><p>Резервации, отговори на гости, отзиви, преводи.</p></div>
+    <div class="industries rv">
+      <div class="ind"><b>Производство</b><span>Оферти, техническа документация, отчети за качество</span></div>
+      <div class="ind"><b>Търговия на едро</b><span>Поръчки по имейл, проверка на склад, потвърждения</span></div>
+      <div class="ind"><b>Счетоводни къщи</b><span>Сортиране на документи, данни от фактури, сверки</span></div>
+      <div class="ind"><b>Транспорт и логистика</b><span>ЧМР-и, митнически документи, известия</span></div>
+      <div class="ind"><b>Имоти</b><span>Отговор на всяко запитване, описания, напомняния</span></div>
+      <div class="ind"><b>Хотели и ресторанти</b><span>Резервации, отговори на гости, отзиви, преводи</span></div>
     </div>
   </div>
 </section>
 
-<!-- DATA -->
 <section>
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">А данните?</span>
-      <h2>Вашите данни си остават ваши.</h2>
-      <p>Това е първият въпрос, който ни задават, и е напълно нормално. Вие избирате къде да стоят. Ние ви обясняваме разликите, без да ви плашим.</p>
+    <div class="sec-head rv">
+      <div class="sec-num"><span>07</span> — Данните</div>
+      <div>
+        <h2>Вашите данни си остават ваши.</h2>
+        <p>Това е първият въпрос, който ни задават, и е напълно нормален. Вие избирате къде да стоят.</p>
+      </div>
     </div>
-    <div class="data">
-      <div class="data-item reveal"><span class="tag">Най-евтино</span><h3>Облак в Европа</h3><p>За обикновени имейли и документи. Сървърите са в Германия и Ирландия и са под европейските правила.</p></div>
-      <div class="data-item reveal"><span class="tag">Баланс</span><h3>Отделен сървър само за вас</h3><p>Никой друг не го ползва. Повече контрол, а цената остава разумна.</p></div>
-      <div class="data-item reveal"><span class="tag">Най-сигурно</span><h3>Компютър във вашия офис</h3><p>Нищо не излиза от сградата. За счетоводство, право, медицина и фирмени тайни.</p></div>
+    <div class="three rv">
+      <div><h3>Облак в Европа</h3><p>За обикновени имейли и документи. Сървърите са в Германия и Ирландия, под европейските правила. Най-достъпният вариант.</p></div>
+      <div><h3>Отделен сървър</h3><p>Само вашата фирма го ползва. Повече контрол, а цената остава разумна.</p></div>
+      <div><h3>Компютър при вас</h3><p>Нищо не излиза от сградата. За счетоводство, право, медицина и фирмени тайни.</p></div>
     </div>
-    <p class="small reveal" style="margin-top:18px">Във всеки проект подготвяме документите по GDPR и новия европейски закон за AI, скриваме личните данни и записваме кой какво е правил.</p>
+    <p class="small rv" style="margin-top:26px">Във всеки проект: документите по GDPR и европейския закон за AI, скрити лични данни, права за достъп и запис кой какво е правил.</p>
   </div>
 </section>
 
-<!-- FIT -->
-<section class="bg-cream">
+<section style="background:var(--paper2)">
   <div class="wrap">
-    <div class="head reveal center">
-      <span class="eyebrow">Честно казано</span>
-      <h2>Не сме за всеки.</h2>
-      <p>По-добре да го кажем още сега, отколкото след месец.</p>
+    <div class="sec-head rv" style="grid-template-columns:1fr">
+      <div>
+        <span class="eyebrow">Честно казано</span>
+        <h2>Не сме за всеки.</h2>
+        <p>По-добре да го кажем още сега, отколкото след месец.</p>
+      </div>
     </div>
     <div class="fit">
-      <div class="fit-col fit-yes reveal">
+      <div class="fit-yes rv">
         <h3>Подходящи сме, ако…</h3>
         <ul>
-          <li>сте между 10 и 250 души и имате офис работа, която се повтаря;</li>
-          <li>знаете, че губите време, но нямате кой да се заеме с това;</li>
+          <li>сте между 10 и 250 души и имате повтаряща се офис работа;</li>
+          <li>знаете, че губите време, но няма кой да се заеме;</li>
           <li>искате резултат с числа, а не презентация;</li>
-          <li>някой от вас може да отделя 2–3 часа седмично за първия месец.</li>
+          <li>някой от вас може да отделя 2–3 часа седмично.</li>
         </ul>
       </div>
-      <div class="fit-col fit-no reveal">
+      <div class="fit-no rv">
         <h3>Не сме подходящи, ако…</h3>
         <ul>
-          <li>търсите чатбот „за да имаме AI“ — без конкретна задача;</li>
-          <li>искате да заместите хора. Ние махаме рутината, не колегите;</li>
-          <li>процесите ви се сменят всяка седмица и никой не знае как точно работят;</li>
-          <li>очаквате резултат за 3 дни. Обикновено отнема около месец.</li>
+          <li>търсите чатбот „за да имаме AI“, без конкретна задача;</li>
+          <li>искате да заместите хора — ние махаме рутината, не колегите;</li>
+          <li>процесите се менят всяка седмица и никой не знае как работят;</li>
+          <li>очаквате резултат за три дни.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
 <section id="faq">
   <div class="wrap">
-    <div class="head reveal center">
-      <span class="eyebrow">Въпроси</span>
-      <h2>Какво ни питат най-често.</h2>
+    <div class="sec-head rv">
+      <div class="sec-num"><span>08</span> — Въпроси</div>
+      <div><h2>Какво ни питат най-често.</h2></div>
     </div>
-    <div class="faq">
-      <details class="reveal"><summary>Трябва ли да сменяме програмите, с които работим?</summary><p>Не. Работим с това, което вече имате — счетоводна програма, ERP, Excel, имейл, Viber. Ако някоя система няма начин за връзка, пак ще намерим как.</p></details>
-      <details class="reveal"><summary>Ами ако AI сгреши?</summary><p>Ще греши понякога, както грешат и хората. Затова всичко важно — оферта, плащане, писмо до клиент — минава през човек, преди да тръгне. Грешките се записват и системата се учи от тях.</p></details>
-      <details class="reveal"><summary>Ще остане ли някой без работа?</summary><p>Не е това целта. Махаме скучната част, за да има хората време за клиентите, продажбите и нещата, които никой софтуер не може да свърши. Идеята е хората да спрат да остават след работно време, а не да ги няма.</p></details>
-      <details class="reveal"><summary>Разбира ли български?</summary><p>Да, и то добре. Преди да започнем, го пробваме върху 50 ваши истински документа — не върху демо. Ако не се справя, ще го видите веднага.</p></details>
-      <details class="reveal"><summary>Колко ще ни струва всеки месец след това?</summary><p>За малка фирма самият AI струва обикновено между 20 и 150 € на месец. Ако искате ние да го следим и подобряваме, поддръжката е от 590 €. Слагаме лимит, за да няма изненади.</p></details>
-      <details class="reveal"><summary>Не можем ли да го направим сами?</summary><p>Можете, разбира се. Ще ви отнеме няколко месеца проби и грешки. Ние сме минали през тях, затова при нас става за около месец.</p></details>
-      <details class="reveal"><summary>Какво става, ако решим да спрем?</summary><p>Получавате всичко — документация, достъпи, обучение. Решението е ваше и продължава да работи и без нас. Не ви държим с договор.</p></details>
-      <details class="reveal"><summary>Защо да ви вярваме, като сте нови?</summary><p>Правилен въпрос. Затова първите 5 фирми получават прегледа безплатно, а гаранцията е записана в договора. Рискът е наш, не ваш.</p></details>
-    </div>
-  </div>
-</section>
-
-<!-- DOWNLOADS -->
-<section id="downloads" class="bg-cream" style="padding:64px 0">
-  <div class="wrap">
-    <div class="head reveal" style="margin-bottom:26px">
-      <h2 style="font-size:28px">Искате да прочетете на спокойствие?</h2>
-      <p>Изтеглете материалите. Не искаме имейл за това.</p>
-    </div>
-    <div class="dl">
-      <a class="reveal" href="downloads/REDNO-Service-Catalog.pdf" download><div class="ic">PDF</div><div><h3>Какво предлагаме и на каква цена</h3><p>Всички пакети, срокове и гаранции · 9 стр.</p></div></a>
-      <a class="reveal" href="downloads/AI-Portfolio-Clients.pdf" download><div class="ic">PDF</div><div><h3>Примери по отрасли</h3><p>Преди и след, сметки, сигурност · 11 стр.</p></div></a>
+    <div class="faq rv">
+      <details><summary>Трябва ли да сменяме програмите, с които работим?</summary><p>Не. Работим с това, което вече имате — счетоводна програма, ERP, Excel, имейл, Viber. Ако някоя система няма връзка, пак ще намерим начин.</p></details>
+      <details><summary>Ами ако AI сгреши?</summary><p>Ще греши понякога, както грешат и хората. Затова всичко важно — оферта, плащане, писмо до клиент — минава през човек, преди да тръгне. Грешките се записват и системата се учи от тях.</p></details>
+      <details><summary>Ще остане ли някой без работа?</summary><p>Не е това целта. Махаме скучната част, за да имат хората време за клиентите и за нещата, които никой софтуер не може да свърши. Идеята е да спрат да остават след работно време, а не да ги няма.</p></details>
+      <details><summary>Разбира ли български?</summary><p>Да. Преди да започнем, го пробваме върху 50 ваши истински документа — не върху демо. Ако не се справя, ще го видите веднага.</p></details>
+      <details><summary>Колко струва всеки месец след това?</summary><p>За малка фирма самият AI струва обикновено между 20 и 150 € на месец. Поддръжката при нас е от 590 €, ако искате да го следим. Слагаме лимит, за да няма изненади.</p></details>
+      <details><summary>Не можем ли да го направим сами?</summary><p>Можете. Ще ви отнеме няколко месеца проби и грешки. Ние сме минали през тях, затова при нас става за около месец.</p></details>
+      <details><summary>Какво става, ако решим да спрем?</summary><p>Получавате всичко — документация, достъпи, обучение. Решението продължава да работи и без нас.</p></details>
+      <details><summary>Защо да ви вярваме, като сте нови?</summary><p>Правилен въпрос. Затова първите 5 фирми получават прегледа безплатно, а гаранцията е записана в договора. Рискът е наш.</p></details>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<section id="downloads" style="padding:0 0 90px">
   <div class="wrap">
-    <div class="cta reveal">
-      <div>
-        <h2>Да поговорим 30 минути.</h2>
-        <p>Разкажете ни една задача, която ви изяжда времето. Ще ви кажем честно дали можем да я махнем, за колко време и на каква цена. Ако не можем, също ще ви кажем.</p>
-        <p style="margin-top:10px"><b style="color:#fff">🎁 Първите 5 фирми получават прегледа (1 500 €) безплатно.</b></p>
-        <div class="direct">Или направо:<br>📞 <a href="tel:+359800000000">+359 8X XXX XXXX</a><br>✉️ <a href="mailto:support@redno.bg">support@redno.bg</a></div>
-      </div>
+    <div class="sec-head rv" style="margin-bottom:32px">
+      <div class="sec-num"><span>09</span> — Материали</div>
+      <div><h2 style="font-size:30px">Искате да го прочетете на спокойствие?</h2><p>Без формуляри и без имейл.</p></div>
+    </div>
+    <div class="dl rv">
+      <a href="downloads/REDNO-Service-Catalog.pdf" download><div class="ic">PDF</div><div><h3>Какво предлагаме и на каква цена</h3><p>Всички пакети, срокове и гаранции · 9 стр.</p></div></a>
+      <a href="downloads/AI-Portfolio-Clients.pdf" download><div class="ic">PDF</div><div><h3>Примери по отрасли</h3><p>Преди и след, сметки, сигурност · 11 стр.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="dark contact">
+  <div class="wrap contact-grid">
+    <div class="contact-left">
+      <span class="eyebrow">Да поговорим</span>
+      <h2>30 минути. Една честна сметка.</h2>
+      <p class="lead">Разкажете ни една задача, която ви изяжда времето. Ще ви кажем дали можем да я махнем, за колко време и на каква цена. Ако не можем — също ще ви кажем.</p>
+      <div class="direct">📞 <a href="tel:+359800000000">+359 8X XXX XXXX</a><br>✉️ <a href="mailto:support@redno.bg">support@redno.bg</a><br>Пловдив, България</div>
+      <div class="offer">Първите 5 фирми получават прегледа (1 500 €) безплатно.</div>
+    </div>
+    <div class="contact-right">
       <form id="leadForm" novalidate>
-        <div class="field"><label for="name">Как се казвате?</label><input id="name" name="name" placeholder="Иван Иванов" required></div>
-        <div class="field"><label for="company">Фирма</label><input id="company" name="company" placeholder="Фирма ООД" required></div>
-        <div class="field"><label for="phone">Телефон или имейл</label><input id="phone" name="phone" placeholder="+359 …" required></div>
-        <div class="field"><label for="pain">Коя задача ви губи най-много време? <span style="font-weight:400;color:var(--grey)">(по желание)</span></label><textarea id="pain" name="pain" rows="2" placeholder="Например: пишем по 20 оферти на ден"></textarea></div>
-        <button class="btn btn-amber" type="submit">Обадете ми се</button>
-        <div class="form-note">Връщаме ви обаждане до един работен ден. Няма да ви пращаме бюлетини.</div>
-        <div class="success" id="ok">
-          <div class="ok">✓</div>
-          <b style="color:var(--navy);font-family:'Golos Text';font-size:18px">Благодаря! Ще се чуем скоро.</b>
-          <p class="small" style="margin-top:6px">(Това е демо форма — при пускане тук се свързва имейл или CRM.)</p>
-        </div>
+        <h3>Оставете координати</h3>
+        <div class="f"><label for="name">Как се казвате?</label><input id="name" name="name" placeholder="Иван Иванов" required></div>
+        <div class="f"><label for="company">Фирма</label><input id="company" name="company" placeholder="Фирма ООД" required></div>
+        <div class="f"><label for="phone">Телефон или имейл</label><input id="phone" name="phone" placeholder="+359 …" required></div>
+        <div class="f"><label for="pain">Коя задача ви губи най-много време?</label><textarea id="pain" name="pain" rows="2" placeholder="Например: пишем по 20 оферти на ден"></textarea></div>
+        <button class="btn btn-fill" type="submit">Обадете ми се</button>
+        <div class="fnote">Връщаме обаждане до един работен ден. Без бюлетини.</div>
+        <div class="ok" id="ok"><b>Благодаря! Ще се чуем скоро.</b><span class="small">(Демо форма — при пускане тук се свързва имейл или CRM.)</span></div>
       </form>
     </div>
   </div>
@@ -619,7 +622,7 @@ footer{background:#0E1B2D;color:#8FA3B8;padding:52px 0 28px}
 
 <footer>
   <div class="wrap">
-    <div class="foot">
+    <div class="fgrid">
       <div>
         <div class="logo"><span class="mark"><i></i><i></i><i></i></span>redno</div>
         <p>Помагаме на фирмите да оставят рутината на AI, за да остане време за важната работа. Пловдив и региона.</p>
@@ -627,8 +630,8 @@ footer{background:#0E1B2D;color:#8FA3B8;padding:52px 0 28px}
       <div>
         <h4>На страницата</h4>
         <ul>
-          <li><a href="#familiar">Какво правим</a></li>
-          <li><a href="#calc">Калкулатор</a></li>
+          <li><a href="#problem">Проблемът</a></li>
+          <li><a href="#calc">Сметката</a></li>
           <li><a href="#how">Как работим</a></li>
           <li><a href="#prices">Цени</a></li>
           <li><a href="#faq">Въпроси</a></li>
@@ -643,33 +646,32 @@ footer{background:#0E1B2D;color:#8FA3B8;padding:52px 0 28px}
         </ul>
       </div>
     </div>
-    <div class="copy"><span>© 2026 РЕДНО</span><span>Направено в Пловдив.</span></div>
+    <div class="fbot"><span>© 2026 РЕДНО</span><span>Направено в Пловдив.</span></div>
   </div>
 </footer>
 
 <script>
 const hdr=document.getElementById('hdr');
-addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10),{passive:true});
+const onScroll=()=>hdr.classList.toggle('solid',scrollY>40);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
 const burger=document.getElementById('burger'),menu=document.getElementById('menu');
 burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
 
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach((el,i)=>{io.observe(el);if(el.closest('.quotes,.steps,.prices,.inds,.data'))el.style.transitionDelay=(i%3)*70+'ms'});
-setTimeout(()=>document.querySelectorAll('.reveal:not(.in)').forEach(el=>{if(el.getBoundingClientRect().top<innerHeight)el.classList.add('in')}),2500);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rv:not(.in)').forEach(el=>{if(el.getBoundingClientRect().top<innerHeight)el.classList.add('in')}),2200);
 
-/* calculator */
 const $=id=>document.getElementById(id);
 const fmt=n=>Math.round(n).toLocaleString('bg-BG').replace(/,/g,' ');
 function calc(){
   const p=+$('cPeople').value,h=+$('cHours').value,r=+$('cRate').value;
   $('oPeople').textContent=p;$('oHours').textContent=h;$('oRate').textContent=r;
-  const saved=p*h*0.5;                 // часове седмично, реално автоматизируеми
-  const year=saved*46*r;
-  const month=saved*46/12;
+  const saved=p*h*.5, year=saved*46*r, month=saved*46/12;
   $('rYear').textContent=fmt(year)+' €';
   $('rHours').textContent=fmt(month)+' ч';
-  $('rDays').textContent=fmt(month/8)+' дни';
+  $('rDays').textContent=fmt(month/8);
   const pay=4900/(year/12);
   $('rPay').textContent=pay<1?'под месец':(pay>36?'над 3 години':'~'+Math.ceil(pay)+' мес.');
 }
@@ -677,7 +679,7 @@ function calc(){
 
 const form=$('leadForm');
 form.addEventListener('submit',e=>{e.preventDefault();
-  form.querySelectorAll('.field,button,.form-note').forEach(el=>el.style.display='none');$('ok').classList.add('show')});
+  form.querySelectorAll('.f,button,.fnote').forEach(el=>el.style.display='none');$('ok').classList.add('show')});
 </script>
 </body>
 </html>
