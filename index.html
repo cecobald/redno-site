@@ -190,6 +190,23 @@ footer{background:#0E1B2D;color:#8FA3B8;padding:56px 0 30px}
 .growth-price b{display:block;font-family:'Golos Text';font-size:26px;color:var(--teal-l);line-height:1}
 .growth-price span{display:block;font-size:11px;color:#AFC0D2;margin:3px 0 10px}
 
+/* marketing */
+.mkt-split{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
+.mkt-col{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.mkt-col h3{font-size:17px;margin-bottom:10px}
+.mkt-col ul{list-style:none}
+.mkt-col li{position:relative;padding-left:20px;font-size:13.6px;color:var(--slate);margin-bottom:8px;line-height:1.5}
+.mkt-col li:before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:3px;background:var(--teal)}
+.mkt-human li:before{background:var(--amber)}
+.mkt-h{font-size:22px;margin:38px 0 16px}
+.mkt-addons{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.mkt-addon{background:#fff;border:1px dashed var(--line);border-radius:12px;padding:16px}
+.mkt-addon b{display:block;font-family:'Golos Text';color:var(--navy);font-size:14px;margin-bottom:3px}
+.mkt-addon span{font-size:12.5px;color:var(--grey)}
+.mkt-cta{display:flex;justify-content:space-between;align-items:center;gap:24px;background:var(--navy);border-radius:18px;padding:24px 28px;margin-top:28px;color:#fff}
+.mkt-cta h3{color:#fff;font-size:19px;margin-bottom:4px}
+.mkt-cta p{color:#AFC0D2;font-size:13.5px;max-width:620px}
+
 /* downloads */
 .dl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .dl-card{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:.25s}
@@ -248,6 +265,7 @@ footer{background:#0E1B2D;color:#8FA3B8;padding:56px 0 30px}
     <nav class="nav-links" id="menu">
       <a href="#problem">Проблемът</a>
       <a href="#services">Пакети</a>
+      <a href="#marketing">Маркетинг</a>
       <a href="#process">Как работим</a>
       <a href="#industries">Отрасли</a>
       <a href="#faq">Въпроси</a>
@@ -368,7 +386,7 @@ footer{background:#0E1B2D;color:#8FA3B8;padding:56px 0 30px}
       </div>
       <div class="growth-price">
         <b>от 800 €</b><span>на месец</span>
-        <a href="#contact" class="btn btn-primary">Научи повече</a>
+        <a href="#marketing" class="btn btn-primary">Виж как работи</a>
       </div>
     </div>
   </div>
@@ -406,6 +424,119 @@ footer{background:#0E1B2D;color:#8FA3B8;padding:56px 0 30px}
       <div class="chipcard reveal"><h4>Логистика</h4><p>CMR и митнически документи, проследяване, клиентски ъпдейти.</p></div>
       <div class="chipcard reveal"><h4>Недвижими имоти</h4><p>Квалификация на запитвания, описания, автоматичен follow-up.</p></div>
       <div class="chipcard reveal"><h4>Хотели и ресторанти</h4><p>Резервации, отговори на въпроси, отзиви, преводи.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETING -->
+<section id="marketing" class="bg-mist">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Категория Growth</div>
+      <h2>AI, който движи маркетинга ви.</h2>
+      <p>Не „още един инструмент“. Цялата машина — сайт, реклама, съдържание, имейли, лийдове и отчет. Вие държите посоката и одобрявате. AI върши работата.</p>
+    </div>
+
+    <div class="cards c3">
+      <div class="card reveal">
+        <div class="num">01 · САЙТ</div>
+        <h3>Сайт, който се поддържа сам</h3>
+        <p>Пишем текстовете по вашия бизнес, правим нови страници за кампании, обновяваме цени и промоции. Следим за бавни страници, счупени връзки и форми, които не изпращат. Заглавия, описания и структура — за да ви намират в Google.</p>
+      </div>
+      <div class="card reveal">
+        <div class="num">02 · РЕКЛАМИ</div>
+        <h3>Реклами, които се тестват сами</h3>
+        <p>Десет варианта на рекламата за минути, не за десет дни. Спираме губещите, увеличаваме печелившите. Бюджетът се пипа само с ваше одобрение — никога на сляпо.</p>
+      </div>
+      <div class="card reveal">
+        <div class="num">03 · СЪДЪРЖАНИЕ</div>
+        <h3>Една идея — пет материала</h3>
+        <p>Един разговор става пост в LinkedIn, карусел в Instagram, имейл и статия. Календар за 90 дни, публикуване по график и нищо, което не е минало през вашия преглед.</p>
+      </div>
+      <div class="card reveal">
+        <div class="num">04 · ИМЕЙЛИ</div>
+        <h3>Имейли, които се четат</h3>
+        <p>Серии за добре дошли, оферти и напомняния. Сегментиране според това какво е отворил клиентът и какво не. Заглавията се тестват, а не се гадаят.</p>
+      </div>
+      <div class="card reveal">
+        <div class="num">05 · ЛИЙДОВЕ</div>
+        <h3>Никое запитване без отговор</h3>
+        <p>Отговор за секунди, квалификация, запис в CRM и напомняне за търговеца. Ако не е сигурен — пита човек, вместо да измисли.</p>
+      </div>
+      <div class="card reveal">
+        <div class="num">06 · ОТЧЕТИ</div>
+        <h3>Числа на разбираем език</h3>
+        <p>Всяка седмица: кой канал носи клиенти, колко струва един лийд и какво да сменим. Без 40-странични PDF-и, които никой не чете.</p>
+      </div>
+    </div>
+
+    <div class="mkt-split reveal">
+      <div class="mkt-col mkt-ai">
+        <h3>Какво поема AI</h3>
+        <ul>
+          <li>Пише, редактира и преписва текстове по вашия бранд глас.</li>
+          <li>Прави варианти за реклами, заглавия и имейли.</li>
+          <li>Публикува по график и следи какво работи.</li>
+          <li>Следи конкуренти, ключови думи и отзиви.</li>
+          <li>Отговаря на първите запитвания и квалифицира.</li>
+          <li>Събира числата и пише седмичния отчет.</li>
+        </ul>
+      </div>
+      <div class="mkt-col mkt-human">
+        <h3>Какво остава за вас</h3>
+        <ul>
+          <li>Решението какво продавате и на кого.</li>
+          <li>Одобрението — един клик, преди нещо да излезе.</li>
+          <li>Разговорите с клиентите и ценообразуването.</li>
+          <li>Бюджетът и границите на разумното.</li>
+          <li>Казването „това не звучи като нас“.</li>
+          <li>Смелите идеи, които AI не би измислил.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="mkt-h reveal">Как изглеждат първите 30 дни</h3>
+    <div class="steps">
+      <div class="step reveal"><h3>Бранд глас</h3><p>Седмица 1. 20 ваши материала, речник и правила какво казваме и какво не.</p></div>
+      <div class="step reveal"><h3>Машината</h3><p>Седмица 2. Сайт, канали, опашка за одобрение и връзка с CRM.</p></div>
+      <div class="step reveal"><h3>Първи публикации</h3><p>Седмица 3. 10 материала и 2 реклами. Калибрираме тона с вас.</p></div>
+      <div class="step reveal"><h3>Ритъм</h3><p>Седмица 4. 30 мин в понеделник за одобрение, 30 мин в петък за отчета.</p></div>
+    </div>
+
+    <h3 class="mkt-h reveal">Пакети</h3>
+    <div class="roi">
+      <div class="roi-card reveal">
+        <div class="t">START</div>
+        <div class="v">800 €<span style="font-size:14px;color:var(--grey)"> /мес.</span></div>
+        <div class="small">setup 2 500 €</div>
+        <ul><li>Канали <b>2</b></li><li>Публикации <b>8/седм.</b></li><li>Опашка за одобрение <b>✓</b></li></ul>
+      </div>
+      <div class="roi-card reveal">
+        <div class="t">GROWTH</div>
+        <div class="v">1 000 €<span style="font-size:14px;color:var(--grey)"> /мес.</span></div>
+        <div class="small">setup 3 200 €</div>
+        <ul><li>Канали <b>3</b></li><li>Публикации <b>16/седм.</b></li><li>Имейл серии + A/B <b>✓</b></li></ul>
+      </div>
+      <div class="roi-card reveal">
+        <div class="t">SCALE</div>
+        <div class="v">1 200 €<span style="font-size:14px;color:var(--grey)"> /мес.</span></div>
+        <div class="small">setup 4 000 €</div>
+        <ul><li>Канали <b>4</b></li><li>Публикации <b>24/седм.</b></li><li>Управление на реклами <b>✓</b></li></ul>
+      </div>
+    </div>
+
+    <div class="mkt-addons reveal">
+      <div class="mkt-addon"><b>Само сайт</b><span>1 900–3 500 € + 90 €/мес. поддръжка</span></div>
+      <div class="mkt-addon"><b>Само реклами</b><span>400 €/мес. + рекламен бюджет</span></div>
+      <div class="mkt-addon"><b>Само съдържание</b><span>600 €/мес. за 8 материала</span></div>
+    </div>
+
+    <div class="mkt-cta reveal">
+      <div>
+        <h3>Искате ли честен маркетинг одит?</h3>
+        <p>30 минути. Показваме ви какво би направил AI с вашия сайт, реклами и съдържание — с числа, не с обещания.</p>
+      </div>
+      <a href="#contact" class="btn btn-amber">Заяви разговор</a>
     </div>
   </div>
 </section>
@@ -547,6 +678,7 @@ footer{background:#0E1B2D;color:#8FA3B8;padding:56px 0 30px}
           <li><a href="#problem">Проблемът</a></li>
           <li><a href="#services">Пакети</a></li>
           <li><a href="#process">Как работим</a></li>
+          <li><a href="#marketing">Маркетинг</a></li>
           <li><a href="#downloads">Материали</a></li>
           <li><a href="#faq">Въпроси</a></li>
         </ul>
