@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>РЕДНО — Подреждаме работата с AI · Пловдив</title>
+<meta name="description" content="Внедряваме изкуствен интелект в ежедневните процеси на фирми в Пловдив. 30 дни, фиксирана цена, измерим резултат.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314243B'/%3E%3Crect x='14' y='16' width='30' height='9' rx='4.5' fill='white'/%3E%3Crect x='14' y='29' width='22' height='9' rx='4.5' fill='white'/%3E%3Crect x='14' y='42' width='14' height='9' rx='4.5' fill='%230F766E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script>document.documentElement.classList.add('js')</script>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14243B; --navy2:#1E3350; --teal:#0F766E; --teal-l:#7DD3C8;
+  --amber:#D97706; --mist:#F2F5F9; --slate:#334155; --grey:#5B6B7C;
+  --line:#DCE4EE; --white:#fff; --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  color:var(--slate); background:var(--white); line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,.display{font-family:'Golos Text','Inter',sans-serif;color:var(--navy);line-height:1.12;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.lead{font-size:19px;color:var(--grey);max-width:640px}
+.small{font-size:13px;color:var(--grey)}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.25s}
+header.scrolled{border-color:var(--line);box-shadow:0 8px 30px rgba(20,36,59,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px;font-family:'Golos Text';font-weight:800;font-size:23px;color:var(--navy);letter-spacing:-.04em}
+.mark{width:30px;height:30px;display:flex;flex-direction:column;justify-content:space-between}
+.mark i{display:block;height:7px;border-radius:4px;background:var(--navy)}
+.mark i:nth-child(1){width:30px}
+.mark i:nth-child(2){width:21px}
+.mark i:nth-child(3){width:13px;background:var(--teal)}
+.nav-links{display:flex;align-items:center;gap:30px;font-size:14.5px;font-weight:500;color:var(--slate)}
+.nav-links a:hover{color:var(--teal)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:10px;font-weight:600;font-size:14.5px;border:1.5px solid transparent;cursor:pointer;transition:.2s;white-space:nowrap}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:var(--navy2);transform:translateY(-1px)}
+.btn-ghost{border-color:var(--line);color:var(--navy);background:#fff}
+.btn-ghost:hover{border-color:var(--navy)}
+.btn-amber{background:var(--amber);color:#fff}
+.btn-amber:hover{filter:brightness(.94)}
+.burger{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--navy);margin:6px 0;border-radius:2px;transition:.25s}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:84px 0 70px}
+.hero:before{content:"";position:absolute;inset:0;background:
+  radial-gradient(900px 420px at 78% 6%, rgba(15,118,110,.10), transparent 60%),
+  radial-gradient(700px 380px at 8% 92%, rgba(217,119,6,.07), transparent 60%);}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(44px,5.4vw,68px);font-weight:800}
+.hero h1 .accent{color:var(--teal)}
+.hero p{margin:22px 0 30px;font-size:19px;color:var(--grey);max-width:520px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero-note{margin-top:18px;font-size:13px;color:var(--grey);display:flex;align-items:center;gap:8px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(15,118,110,.12)}
+
+/* mock ui */
+.mock{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 70px rgba(20,36,59,.13);overflow:hidden;transform:rotate(.6deg)}
+.mock-bar{display:flex;align-items:center;gap:7px;padding:13px 16px;background:var(--mist);border-bottom:1px solid var(--line)}
+.mock-bar b{font-size:11.5px;color:var(--grey);font-weight:500;margin-left:6px;letter-spacing:.04em}
+.tl{width:9px;height:9px;border-radius:50%;background:#E2E8F0}
+.mock-body{padding:18px 18px 20px}
+.msg{display:flex;gap:10px;margin-bottom:13px;align-items:flex-start}
+.avatar{width:28px;height:28px;border-radius:8px;background:var(--navy);color:#fff;font-size:11px;display:grid;place-items:center;font-weight:700;flex:none}
+.avatar.ai{background:var(--teal)}
+.bubble{background:var(--mist);border-radius:12px;padding:10px 13px;font-size:12.8px;line-height:1.5;color:var(--slate)}
+.bubble.user{background:#fff;border:1px solid var(--line)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:600;color:var(--teal);background:rgba(15,118,110,.09);padding:4px 9px;border-radius:999px;margin-bottom:9px}
+.attach{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin-top:9px;font-size:11.5px}
+.attach b{display:block;color:var(--navy);font-size:12px}
+.mock-foot{display:flex;gap:8px;padding:0 18px 18px}
+.chip{font-size:11px;font-weight:600;color:var(--teal);background:rgba(15,118,110,.08);padding:5px 10px;border-radius:999px}
+
+/* ---------- stats ---------- */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat{padding:30px 24px;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat b{display:block;font-family:'Golos Text';font-size:34px;line-height:1;color:var(--navy);letter-spacing:-.03em}
+.stat span{display:block;margin-top:8px;font-size:13px;color:var(--grey);line-height:1.45}
+
+/* ---------- sections ---------- */
+section{padding:88px 0}
+.section-head{max-width:720px;margin-bottom:46px}
+.section-head h2{font-size:clamp(30px,3.4vw,42px);font-weight:800;margin-bottom:14px}
+.section-head p{font-size:17px;color:var(--grey)}
+.bg-mist{background:var(--mist)}
+.bg-navy{background:var(--navy);color:#fff}
+.bg-navy h2,.bg-navy h3{color:#fff}
+.bg-navy .section-head p{color:#AFC0D2}
+
+/* cards */
+.cards{display:grid;gap:20px}
+.cards.c4{grid-template-columns:repeat(4,1fr)}
+.cards.c3{grid-template-columns:repeat(3,1fr)}
+.cards.c2{grid-template-columns:repeat(2,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:.25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(20,36,59,.08);border-color:#C9D6E6}
+.card .num{font-family:'Golos Text';font-size:13px;font-weight:700;color:var(--teal);letter-spacing:.08em;margin-bottom:12px}
+.card h3{font-size:19px;margin-bottom:9px}
+.card p{font-size:14px;color:var(--grey)}
+.card .big{font-family:'Golos Text';font-size:32px;font-weight:800;color:var(--navy);letter-spacing:-.03em;margin-bottom:4px}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+.step{position:relative;padding-top:22px}
+.step:before{counter-increment:s;content:"0" counter(s);font-family:'Golos Text';font-size:15px;font-weight:800;color:var(--teal);display:block;margin-bottom:12px}
+.step:after{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--line)}
+.step:first-child:after{background:var(--teal)}
+.step h3{font-size:16.5px;margin-bottom:7px}
+.step p{font-size:13.5px;color:var(--grey)}
+
+/* verticals */
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.chipcard{border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:20px;background:rgba(255,255,255,.04)}
+.chipcard h4{color:#fff;font-size:15.5px;margin-bottom:6px}
+.chipcard p{color:#AFC0D2;font-size:13px}
+
+/* roi */
+.roi{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.roi-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.roi-card .t{font-size:13px;color:var(--grey);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.roi-card .v{font-family:'Golos Text';font-size:30px;font-weight:800;color:var(--teal);margin:8px 0 2px;letter-spacing:-.03em}
+.roi-card ul{list-style:none;margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+.roi-card li{display:flex;justify-content:space-between;font-size:13.5px;padding:5px 0;color:var(--slate)}
+.roi-card li b{color:var(--navy)}
+
+/* security */
+.sec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sec-item{background:#fff;border-radius:var(--r);padding:24px;border:1px solid var(--line)}
+.sec-item h3{font-size:16px;margin-bottom:7px}
+.sec-item p{font-size:13.5px;color:var(--grey)}
+
+/* faq */
+.faq{max-width:840px;margin:0 auto}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;list-style:none;font-family:'Golos Text';font-weight:600;font-size:16.5px;color:var(--navy);display:flex;justify-content:space-between;gap:20px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:22px;color:var(--teal);font-weight:400;transition:.2s;line-height:1}
+details[open] summary:after{transform:rotate(45deg)}
+details p{margin-top:12px;font-size:14.5px;color:var(--grey);max-width:720px}
+
+/* cta */
+.cta{background:var(--navy);border-radius:26px;padding:56px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+.cta:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(15,118,110,.22);filter:blur(70px);right:-120px;top:-140px}
+.cta h2{color:#fff;font-size:clamp(28px,3vw,38px);font-weight:800;position:relative}
+.cta p{color:#AFC0D2;margin:14px 0 0;font-size:16px;position:relative}
+form{position:relative;background:#fff;border-radius:16px;padding:22px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:12px;font-weight:600;color:var(--grey);margin-bottom:5px}
+.field input{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:14px;color:var(--navy);background:#fff}
+.field input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(15,118,110,.12)}
+form .btn{width:100%;margin-top:4px}
+.form-note{font-size:11.5px;color:var(--grey);margin-top:10px;text-align:center}
+.success{display:none;text-align:center;padding:26px 10px}
+.success.show{display:block}
+.success .ok{width:44px;height:44px;border-radius:50%;background:rgba(15,118,110,.12);color:var(--teal);display:grid;place-items:center;margin:0 auto 12px;font-size:20px}
+
+/* footer */
+footer{background:#0E1B2D;color:#8FA3B8;padding:56px 0 30px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.09)}
+.foot .logo{color:#fff;margin-bottom:14px}
+.foot .logo .mark i{background:#fff}
+.foot .logo .mark i:nth-child(3){background:var(--teal-l)}
+.foot p{font-size:13.5px;max-width:320px}
+.foot h4{color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.foot ul{list-style:none;font-size:13.5px}
+.foot li{margin-bottom:9px}
+.foot a:hover{color:var(--teal-l)}
+.copy{padding-top:22px;display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:10px}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:46px}
+  .mock{transform:none;max-width:520px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}
+  .cards.c4{grid-template-columns:repeat(2,1fr)}
+  .cards.c3,.chips,.roi,.sec-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr);gap:30px}
+  .cta{grid-template-columns:1fr;padding:40px}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  section{padding:64px 0}
+  .nav-links{position:fixed;inset:72px 0 auto;background:#fff;flex-direction:column;align-items:flex-start;padding:24px;gap:18px;border-bottom:1px solid var(--line);transform:translateY(-140%);transition:.3s;box-shadow:0 20px 40px rgba(20,36,59,.08)}
+  .nav-links.open{transform:none}
+  .nav .btn{display:none}
+  .burger{display:block}
+  .cards.c4,.cards.c3,.cards.c2,.chips,.roi,.sec-grid,.steps{grid-template-columns:1fr}
+  .stat{padding:22px 18px}
+  .stat b{font-size:27px}
+  .cta{padding:30px;border-radius:20px}
+  .foot{grid-template-columns:1fr;gap:28px}
+  .hero{padding:54px 0 50px}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="РЕДНО начало">
+      <span class="mark"><i></i><i></i><i></i></span>redno
+    </a>
+    <nav class="nav-links" id="menu">
+      <a href="#problem">Проблемът</a>
+      <a href="#services">Пакети</a>
+      <a href="#process">Как работим</a>
+      <a href="#industries">Отрасли</a>
+      <a href="#faq">Въпроси</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary">Безплатен разговор</a>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">AI операции · Пловдив</div>
+      <h1>Подреждаме работата.<br><span class="accent">Освобождаваме хората.</span></h1>
+      <p>Внедряваме изкуствен интелект в ежедневните процеси на фирми в Пловдив. 30 дни, фиксирана цена, измерим резултат.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Безплатен 30-минутен разговор</a>
+        <a href="#services" class="btn btn-ghost">Вижте пакетите</a>
+      </div>
+      <div class="hero-note"><span class="dot"></span> Без ангажимент. Без слайдове. Само числа.</div>
+    </div>
+
+    <div class="mock reveal" aria-hidden="true">
+      <div class="mock-bar">
+        <span class="tl"></span><span class="tl"></span><span class="tl"></span>
+        <b>redno · работен поток</b>
+      </div>
+      <div class="mock-body">
+        <div class="msg">
+          <div class="avatar">КЛ</div>
+          <div class="bubble user">Здравейте, трябва ми оферта за 14 артикула от приложението. До утре?</div>
+        </div>
+        <div class="msg">
+          <div class="avatar ai">R</div>
+          <div class="bubble">
+            <div class="tag">● обработено за 6 мин</div>
+            Оферта №2026-118 е готова. Проверих наличностите в ERP — 2 артикула са с 3-дневен срок. Цените са по договор №14.
+            <div class="attach"><span><b>oferta-2026-118.pdf</b>14 позиции · 3 стр.</span><span style="color:var(--teal);font-weight:600">Преглед</span></div>
+          </div>
+        </div>
+        <div class="msg">
+          <div class="avatar">КЛ</div>
+          <div class="bubble user">Перфектно. Изпрати я.</div>
+        </div>
+      </div>
+      <div class="mock-foot"><span class="chip">Човешко одобрение</span><span class="chip">Лог на действията</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><b>46 314</b><span>предприятия в област Пловдив</span></div>
+    <div class="stat"><b>8.55%</b><span>използват AI (ЕС: 19.95%)</span></div>
+    <div class="stat"><b>20–40 ч</b><span>спестени на месец, типично</span></div>
+    <div class="stat"><b>30 дни</b><span>до първия работещ резултат</span></div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Проблемът</div>
+      <h2>37 часа седмично. Толкова губи една фирма с 40 души.</h2>
+      <p>Не защото екипът е слаб. А защото процесът е счупен. Ето къде отиват часовете — и какво се случва, когато ги върнем.</p>
+    </div>
+    <div class="cards c4">
+      <div class="card reveal"><div class="num">01</div><h3>Оферти</h3><div class="big">11 ч</div><p>на седмица в писане, проверки и преправяне.</p></div>
+      <div class="card reveal"><div class="num">02</div><h3>Фактури</h3><div class="big">8 ч</div><p>на седмица в въвеждане и сверяване на данни.</p></div>
+      <div class="card reveal"><div class="num">03</div><h3>Едни и същи въпроси</h3><div class="big">6 ч</div><p>на седмица в отговори, които вече са написани някъде.</p></div>
+      <div class="card reveal"><div class="num">04</div><h3>Търсене на файлове</h3><div class="big">5 ч</div><p>на седмица в „къде беше онзи договор от 2023?“.</p></div>
+    </div>
+    <p class="small reveal" style="margin-top:18px">Моделирано при 15 €/час натоварена стойност и 46 работни седмици. Вашите числа се измерват в одита.</p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="bg-mist">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Пакети</div>
+      <h2>Фиксирана цена. Ясен обхват.</h2>
+      <p>Без „часове и материали“. Без изненади във фактурата. Започвате малко и виждате резултата, преди да инвестирате повече.</p>
+    </div>
+    <div class="cards c4">
+      <div class="card reveal">
+        <div class="num">ОДИТ · 2 ДНИ</div>
+        <div class="big">1 500 €</div>
+        <p style="margin:10px 0 0">Карта на 5–8 процеса, измерени времена, ROI за всеки и пътна карта за 12 месеца.</p>
+      </div>
+      <div class="card reveal">
+        <div class="num">QUICK WIN · 3–4 СЕД.</div>
+        <div class="big">4 900 €</div>
+        <p style="margin:10px 0 0">Един процес от край до край, обучение на екипа и 30 дни гаранция.</p>
+      </div>
+      <div class="card reveal">
+        <div class="num">CORE · 6–10 СЕД.</div>
+        <div class="big">12–28 хил. €</div>
+        <p style="margin:10px 0 0">3–6 свързани процеса, ERP/CRM интеграции, база знания и табло за резултатите.</p>
+      </div>
+      <div class="card reveal">
+        <div class="num">ГРИЖА · МЕСЕЧНО</div>
+        <div class="big">от 590 €</div>
+        <p style="margin:10px 0 0">Мониторинг, промени, месечен отчет. Без дългосрочен договор.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как работим</div>
+      <h2>От разговор до работеща система за 30 дни.</h2>
+      <p>От вас се искат 2–3 часа седмично. Не проектна организация и не IT екип.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Одит</h3><p>Ден 1–2. Сядаме с 3–5 души, картираме процесите и мерим времената.</p></div>
+      <div class="step reveal"><h3>План</h3><p>Ден 3–5. Един процес за пилот, фиксирана цена, срок и KPI. Подписваме.</p></div>
+      <div class="step reveal"><h3>Внедряване</h3><p>Седмица 2–4. Свързваме системите, обучаваме модела на вашите документи, пускаме в реална среда.</p></div>
+      <div class="step reveal"><h3>Приемане</h3><p>Ден 30. Мерим заедно. Ако KPI не е изпълнен — доработваме или връщаме 50%.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries" class="bg-navy">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="color:var(--teal-l)">Отрасли</div>
+      <h2>Готови решения, не измисляне от нулата.</h2>
+      <p>Затова сме по-бързи и по-евтини. Пакетите се адаптират към вашите системи, но логиката вече е измислена.</p>
+    </div>
+    <div class="chips">
+      <div class="chipcard reveal"><h4>Производство</h4><p>Оферти, техническа документация, QC отчети, складови наличности.</p></div>
+      <div class="chipcard reveal"><h4>Търговия на едро</h4><p>Поръчки по имейл и WhatsApp, проверка на наличности, потвърждения.</p></div>
+      <div class="chipcard reveal"><h4>Счетоводни къщи</h4><p>Класификация на документи, извличане на данни, сверки.</p></div>
+      <div class="chipcard reveal"><h4>Логистика</h4><p>CMR и митнически документи, проследяване, клиентски ъпдейти.</p></div>
+      <div class="chipcard reveal"><h4>Недвижими имоти</h4><p>Квалификация на запитвания, описания, автоматичен follow-up.</p></div>
+      <div class="chipcard reveal"><h4>Хотели и ресторанти</h4><p>Резервации, отговори на въпроси, отзиви, преводи.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Възвръщаемост</div>
+      <h2>Колко връща инвестицията.</h2>
+      <p>Три профила. Числата са моделирани — вашите се измерват в одита, преди да платите за проект.</p>
+    </div>
+    <div class="roi">
+      <div class="roi-card reveal">
+        <div class="t">Малка фирма · 15 души</div>
+        <div class="v">~7 месеца</div>
+        <div class="small">до изплащане</div>
+        <ul><li>Спестени часове <b>45 ч/мес</b></li><li>Полза годишно <b>8 100 €</b></li><li>Проект <b>4 900 €</b></li></ul>
+      </div>
+      <div class="roi-card reveal">
+        <div class="t">Средна фирма · 45 души</div>
+        <div class="v">~4 месеца</div>
+        <div class="small">до изплащане</div>
+        <ul><li>Спестени часове <b>120 ч/мес</b></li><li>Полза годишно <b>28 800 €</b></li><li>Проект <b>9 800 €</b></li></ul>
+      </div>
+      <div class="roi-card reveal">
+        <div class="t">Голяма фирма · 120 души</div>
+        <div class="v">~3 месеца</div>
+        <div class="small">до изплащане</div>
+        <ul><li>Спестени часове <b>300 ч/мес</b></li><li>Полза годишно <b>79 200 €</b></li><li>Проект <b>21 000 €</b></li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY -->
+<section class="bg-mist">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Сигурност</div>
+      <h2>Данните остават при вас. Винаги.</h2>
+      <p>Вие избирате къде живеят. Ние подготвяме документите, маскираме личните данни и оставяме пълен лог кой какво е правил.</p>
+    </div>
+    <div class="sec-grid">
+      <div class="sec-item reveal"><h3>Облак в ЕС</h3><p>Най-бърз и евтин. За общи текстове и нечувствителни документи. Сървъри в Германия и Ирландия.</p></div>
+      <div class="sec-item reveal"><h3>Частен сървър</h3><p>Изолиран tenant, само вашата фирма. Добър баланс между цена и контрол.</p></div>
+      <div class="sec-item reveal"><h3>Локално при вас</h3><p>Нищо не напуска сградата. За финанси, право, здраве и производствени тайни.</p></div>
+    </div>
+    <p class="small reveal" style="margin-top:20px">Включено във всеки проект: DPA, регистър на обработките, маскиране на лични данни, права за достъп, одит лог, AI политика и обучение по AI грамотност (EU AI Act).</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
+      <div class="eyebrow">Въпроси</div>
+      <h2>Често задавани.</h2>
+    </div>
+    <div class="faq">
+      <details class="reveal"><summary>Колко време трябва да отдели екипът ми?</summary><p>2–3 часа седмично в първите 4 седмици — за обяснение на процеса и проверка на резултатите. Не искаме да ви правим IT екип.</p></details>
+      <details class="reveal"><summary>Трябва ли да сменя ERP или CRM?</summary><p>Не. Работим с това, което имате — чрез API, файлове или имейл. Ако системата няма API, пак има начин.</p></details>
+      <details class="reveal"><summary>Какво става, когато AI сгреши?</summary><p>Човекът одобрява действията с последствия. Грешките се логват и анализират. Договорът има KPI и гаранция — не разчитаме на „ще се оправи“.</p></details>
+      <details class="reveal"><summary>Къде отиват данните ни?</summary><p>Вие избирате: облак в ЕС, частен сървър или локална машина във вашия офис. По подразбиране — минимално излизане на данни и маскиране на личните.</p></details>
+      <details class="reveal"><summary>Работи ли на български?</summary><p>Да. Използваме BgGPT, Gemma 3 и Qwen 3.5. Преди внедряване правим тест върху 50 ваши реални документа — не вярваме на демота.</p></details>
+      <details class="reveal"><summary>Колко струва токенът всеки месец?</summary><p>Обикновено 20–150 € за малка фирма и 300–900 € при тежка обработка на документи. Имате бюджетен лимит и месечен отчет.</p></details>
+      <details class="reveal"><summary>Можем ли да го направим сами?</summary><p>Можете. Ще ви отнеме 6–12 месеца проби и грешки. Ние пестим точно това време.</p></details>
+      <details class="reveal"><summary>Какво се случва след 30-ия ден?</summary><p>Или продължавате с месечна поддръжка, или поемате сами — даваме документация, обучение и достъпи. Няма заключване.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div>
+        <h2>Готови ли сте да видите къде губите време?</h2>
+        <p>Един разговор. Една честна сметка. Без ангажимент. Носете един процес — излизате с число.</p>
+        <p style="margin-top:22px;font-size:14px">Ceco Bald · Пловдив<br>+359 8X XXX XXXX · hello@redno.bg</p>
+      </div>
+      <form id="leadForm" novalidate>
+        <div class="field"><label for="name">Име</label><input id="name" name="name" placeholder="Иван Иванов" required></div>
+        <div class="field"><label for="company">Фирма</label><input id="company" name="company" placeholder="Фирма ООД" required></div>
+        <div class="field"><label for="phone">Телефон или имейл</label><input id="phone" name="phone" placeholder="+359 ..." required></div>
+        <button class="btn btn-amber" type="submit">Заяви безплатен разговор</button>
+        <div class="form-note">Отговаряме до един работен ден. Без бюлетини.</div>
+        <div class="success" id="ok">
+          <div class="ok">✓</div>
+          <b style="color:var(--navy);font-family:'Golos Text'">Благодарим!</b>
+          <p class="small" style="margin-top:4px">Това е демо форма. При реално пускане тук се свързва CRM или имейл.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="logo"><span class="mark"><i></i><i></i><i></i></span>redno</div>
+        <p>Подреждаме работата на фирмите с AI — за 30 дни и на фиксирана цена. Пловдив и региона.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="#problem">Проблемът</a></li>
+          <li><a href="#services">Пакети</a></li>
+          <li><a href="#process">Как работим</a></li>
+          <li><a href="#faq">Въпроси</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакт</h4>
+        <ul>
+          <li><a href="tel:+359800000000">+359 8X XXX XXXX</a></li>
+          <li><a href="mailto:hello@redno.bg">hello@redno.bg</a></li>
+          <li>Пловдив, България</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy"><span>© 2026 РЕДНО. Всички права запазени.</span><span>Изработено в Пловдив.</span></div>
+  </div>
+</footer>
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10),{passive:true});
+
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{
+  const open=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  menu.classList.remove('open');burger.setAttribute('aria-expanded','false');
+}));
+
+const io=new IntersectionObserver((es)=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* fallback: ако нещо не се е задействало, покажи всичко след 3 сек */
+setTimeout(()=>document.querySelectorAll('.reveal:not(.in)').forEach(el=>{
+  if(el.getBoundingClientRect().top < innerHeight) el.classList.add('in');
+}),3000);
+
+document.querySelectorAll('.reveal').forEach((el,i)=>{
+  if(el.closest('.cards,.chips,.roi,.sec-grid,.steps')) el.style.transitionDelay=(i%4)*60+'ms';
+});
+
+const form=document.getElementById('leadForm');
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  form.querySelectorAll('.field, button, .form-note').forEach(el=>el.style.display='none');
+  document.getElementById('ok').classList.add('show');
+});
+</script>
+</body>
+</html>
