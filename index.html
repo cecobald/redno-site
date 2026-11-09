@@ -169,6 +169,19 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
 .prow.star .per{color:#9AA6B2}
 .star-tag{display:inline-block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-l);border:1px solid var(--accent-l);padding:3px 8px;margin-bottom:10px}
 
+
+/* info popups */
+.info{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;margin-left:7px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);background:transparent;font-family:'Onest';font-style:normal;font-size:10.5px;font-weight:700;line-height:1;cursor:pointer;position:relative;vertical-align:middle;padding:0;transition:.15s}
+.info:hover,.info:focus{background:var(--accent);color:#fff;outline:none}
+.info:after{content:attr(data-tip);position:absolute;left:-8px;bottom:calc(100% + 10px);width:255px;background:var(--ink);color:#EDE7DC;font-family:'Onest';font-size:12.5px;font-weight:400;line-height:1.5;letter-spacing:0;text-align:left;padding:11px 13px;border-radius:7px;box-shadow:0 14px 34px rgba(16,24,32,.25);opacity:0;visibility:hidden;transform:translateY(4px);transition:.18s;z-index:30;pointer-events:none;white-space:normal}
+.info:before{content:"";position:absolute;left:6px;bottom:calc(100% + 3px);border:6px solid transparent;border-top-color:var(--ink);opacity:0;visibility:hidden;transition:.18s;z-index:31}
+.info:hover:after,.info:focus:after,.info.open:after,.info:hover:before,.info:focus:before,.info.open:before{opacity:1;visibility:visible;transform:none}
+.prow.star .info{border-color:var(--accent-l);color:var(--accent-l)}
+.prow.star .info:hover{background:var(--accent-l);color:var(--ink)}
+@media(max-width:720px){
+  .info:after{width:min(255px,calc(100vw - 56px));left:-6px}
+}
+
 /* misc grids */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:60px}
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;border-top:1px solid var(--rule);padding-top:34px}
@@ -455,27 +468,27 @@ footer a:hover{color:#fff}
     <div class="plist rv">
       <div class="prow">
         <div><h3>Преглед</h3><p class="desc">Искате да разберете какво изобщо може да се автоматизира.</p></div>
-        <ul><li>5–8 задачи</li><li>Измерено време</li><li>Сметка за спестяванията</li><li>План за година</li></ul>
+        <ul><li>5–8 задачи<span class="info" tabindex="0" role="button" aria-label="Обяснение: 5–8 задачи" data-tip="Задача = една повтаряща се работа на един човек, с начало и край. Напр. „запитване → проверка на наличност → оферта“. Не е „целия отдел“ или „всички документи“.">i</span></li><li>Измерено време</li><li>Сметка за спестяванията</li><li>План за година</li></ul>
         <div class="price"><div class="amt">490 €</div><div class="per">приспада се от проекта · 5 дни</div></div>
       </div>
       <div class="prow">
         <div><h3>Старт</h3><p class="desc">Искате да пробвате с една малка, ясна задача.</p></div>
-        <ul><li>Една автоматизация</li><li>2 седмици</li><li>1 интеграция</li><li>500 документа/мес.</li></ul>
+        <ul><li>Една автоматизация<span class="info" tabindex="0" role="button" aria-label="Обяснение: Една автоматизация" data-tip="Един вход → един изход, без разклонения. Напр. нов имейл със заявка → чернова на отговор. Без втори тип документ и без многостепенно одобрение.">i</span></li><li>2 седмици</li><li>1 интеграция<span class="info" tabindex="0" role="button" aria-label="Обяснение: 1 интеграция" data-tip="Една връзка между две системи по един канал — API, имейл, файл или таблица. Всяка допълнителна система или обратна посока се брои като нова интеграция.">i</span></li><li>500 документа/мес.</li></ul>
         <div class="price"><div class="amt">1 900 €</div><div class="per">2 седмици · 30 дни поддръжка</div></div>
       </div>
       <div class="prow star">
         <div><span class="star-tag">Повечето започват оттук</span><h3>Бърз старт</h3><p class="desc">Искате една задача да започне да се върши сама — още сега.</p></div>
-        <ul><li>Една задача от край до край</li><li>Обучение на екипа</li><li>3 месеца поддръжка</li><li>Гаранция за резултат</li></ul>
+        <ul><li>Една задача от край до край<span class="info" tabindex="0" role="button" aria-label="Обяснение: Една задача от край до край" data-tip="Един процес, изграден докрай: задействане → обработка → човешко одобрение → резултат → лог. До 2 интеграции и до 3 разклонения (липсва наличност, отстъпка над лимит и т.н.).">i</span></li><li>Обучение на екипа</li><li>3 месеца поддръжка</li><li>Гаранция за резултат</li></ul>
         <div class="price"><div class="amt">2 900 €</div><div class="per">3–4 седмици</div></div>
       </div>
       <div class="prow">
         <div><h3>Цялостно</h3><p class="desc">Искате няколко отдела да работят свързано.</p></div>
-        <ul><li>3–6 свързани процеса</li><li>Връзка с ERP / CRM</li><li>База знания</li><li>Табло с резултати</li></ul>
+        <ul><li>3–6 свързани процеса<span class="info" tabindex="0" role="button" aria-label="Обяснение: 3–6 свързани процеса" data-tip="Верига, в която изходът на единия процес е вход за следващия: запитване → оферта → поръчка → фактура. 3 процеса = Core S, 4–5 = M, 6 = L.">i</span></li><li>Връзка с ERP / CRM<span class="info" tabindex="0" role="button" aria-label="Обяснение: Връзка с ERP / CRM" data-tip="Двупосочна връзка с конкретно изброени обекти: клиент, продукт, наличност, поръчка, фактура. Не включва промени в самия ERP, платен API достъп или миграция на стари данни.">i</span></li><li>База знания<span class="info" tabindex="0" role="button" aria-label="Обяснение: База знания" data-tip="Вашите документи (договори, процедури, ценоразписи), индексирани така, че AI отговаря с цитат от източника. До 300 документа / 2 000 страници, с права по роля.">i</span></li><li>Табло с резултати<span class="info" tabindex="0" role="button" aria-label="Обяснение: Табло с резултати" data-tip="Една страница с 5–7 числа, обновявани автоматично: обработени документи, средно време, дял на ръчните корекции, спестени часове, разход за AI.">i</span></li></ul>
         <div class="price"><div class="amt">5 900–12 900 €</div><div class="per">6–10 седмици</div></div>
       </div>
       <div class="prow">
         <div><h3>Поддръжка</h3><p class="desc">Искате някой да го следи и подобрява след старта.</p></div>
-        <ul><li>Наблюдение 24/7</li><li>Промени при нужда</li><li>Месечен отчет</li><li>Без срок</li></ul>
+        <ul><li>Наблюдение 24/7</li><li>Промени при нужда</li><li>Месечен отчет<span class="info" tabindex="0" role="button" aria-label="Обяснение: Месечен отчет" data-tip="1–2 страници + 30 минути разговор: обем обработено, спестени часове, грешки и какво е направено, реален разход за AI, 3 препоръки.">i</span></li><li>Без срок</li></ul>
         <div class="price"><div class="amt">от 290 €</div><div class="per">на месец</div></div>
       </div>
     </div>
@@ -668,6 +681,20 @@ menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.class
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -60px 0px'});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 setTimeout(()=>document.querySelectorAll('.rv:not(.in)').forEach(el=>{if(el.getBoundingClientRect().top<innerHeight)el.classList.add('in')}),2200);
+
+
+/* info popups: клик за телефон, Escape/външен клик за затваряне */
+document.querySelectorAll('.info').forEach(el=>{
+  el.addEventListener('click',e=>{
+    e.preventDefault();e.stopPropagation();
+    const wasOpen=el.classList.contains('open');
+    document.querySelectorAll('.info.open').forEach(o=>o.classList.remove('open'));
+    if(!wasOpen)el.classList.add('open');
+  });
+  el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click()}});
+});
+document.addEventListener('click',()=>document.querySelectorAll('.info.open').forEach(o=>o.classList.remove('open')));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.info.open').forEach(o=>o.classList.remove('open'))});
 
 const $=id=>document.getElementById(id);
 const fmt=n=>Math.round(n).toLocaleString('bg-BG').replace(/,/g,' ');
