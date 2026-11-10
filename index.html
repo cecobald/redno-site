@@ -257,6 +257,30 @@ footer li{margin-bottom:9px}
 footer a:hover{color:#fff}
 .fbot{padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px}
 
+/* REDNO BOX */
+.box-intro{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center;margin-bottom:66px}
+.box-shot img{width:100%;height:auto;border:1px solid var(--rule)}
+.box-shot figcaption{font-size:12.5px;color:var(--muted);margin-top:10px}
+.box-list{list-style:none;display:grid;gap:17px}
+.box-list li{display:grid;gap:2px;padding-left:18px;position:relative}
+.box-list li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;background:var(--accent)}
+.box-list b{font-family:'Playfair Display';font-size:18px;color:var(--ink);line-height:1.25}
+.box-list span{font-size:15px;color:var(--body)}
+.box-tiers{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
+.box-tier{padding:26px 24px 24px;border-left:1px solid var(--rule)}
+.box-tier:first-child{border-left:0;padding-left:0}
+.box-tier h3{font-size:22px;margin-bottom:2px}
+.box-tier .who{font-size:13px;color:var(--muted);margin-bottom:14px}
+.box-tier ul{list-style:none;font-size:14px;color:var(--body);margin-bottom:16px}
+.box-tier li{padding:2px 0 2px 14px;position:relative}
+.box-tier li:before{content:"—";position:absolute;left:0;color:var(--accent)}
+.box-tier .amt{font-family:'Playfair Display';font-size:26px;color:var(--ink);font-weight:700;line-height:1.2}
+.box-tier .per{font-size:12.5px;color:var(--muted)}
+.box-sec{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:52px;padding-top:30px;border-top:1px solid var(--rule)}
+.box-sec b{display:block;font-family:'Playfair Display';font-size:16.5px;color:var(--ink);margin-bottom:6px}
+.box-sec p{font-size:14px}
+.box-note{font-size:13px;color:var(--muted);margin-top:24px;max-width:78ch}
+
 .js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .js .rv.in{opacity:1;transform:none}
 
@@ -264,6 +288,10 @@ footer a:hover{color:#fff}
   .sec-head{grid-template-columns:1fr;gap:14px}
   .sec-num{border:0;padding:0}
   .facts,.three{grid-template-columns:1fr 1fr}
+  .box-intro{grid-template-columns:1fr;gap:34px}
+  .box-tiers{grid-template-columns:1fr}
+  .box-tier{border-left:0;border-top:1px solid var(--rule);padding-left:0}
+  .box-sec{grid-template-columns:1fr 1fr}
   .fact:nth-child(2){border-right:0}
   .duo{grid-template-columns:1fr}
   .duo img{height:360px}
@@ -309,6 +337,7 @@ footer a:hover{color:#fff}
       <a href="#calc">Сметката</a>
       <a href="#how">Как работим</a>
       <a href="#prices">Цени</a>
+      <a href="#box">REDNO BOX</a>
       <a href="#faq">Въпроси</a>
     </nav>
     <a href="#contact" class="btn btn-fill">Да поговорим</a>
@@ -517,7 +546,7 @@ footer a:hover{color:#fff}
 <section class="dark">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="sec-num"><span>06</span> — Отрасли</div>
+      <div class="sec-num"><span>07</span> — Отрасли</div>
       <div>
         <h2>Не започваме от нулата.</h2>
         <p>За тези отрасли решенията вече са измислени и тествани. Само ги нагласяме за вас — затова става по-бързо и по-евтино.</p>
@@ -537,7 +566,7 @@ footer a:hover{color:#fff}
 <section>
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="sec-num"><span>07</span> — Данните</div>
+      <div class="sec-num"><span>08</span> — Данните</div>
       <div>
         <h2>Вашите данни си остават ваши.</h2>
         <p>Това е първият въпрос, който ни задават, и е напълно нормален. Вие избирате къде да стоят.</p>
@@ -546,9 +575,67 @@ footer a:hover{color:#fff}
     <div class="three rv">
       <div><h3>Облак в Европа</h3><p>За обикновени имейли и документи. Сървърите са в Германия и Ирландия, под европейските правила. Най-достъпният вариант.</p></div>
       <div><h3>Отделен сървър</h3><p>Само вашата фирма го ползва. Повече контрол, а цената остава разумна.</p></div>
-      <div><h3>Компютър при вас</h3><p>Нищо не излиза от сградата. За счетоводство, право, медицина и фирмени тайни.</p></div>
+      <div><h3>Компютър при вас</h3><p>Нищо не излиза от сградата. За счетоводство, право, медицина и фирмени тайни.</p><p style="margin-top:10px"><a href="#box" style="color:var(--accent);font-weight:600">Вижте REDNO BOX →</a></p></div>
     </div>
     <p class="small rv" style="margin-top:26px">Във всеки проект: документите по GDPR и европейския закон за AI, скрити лични данни, права за достъп и запис кой какво е правил.</p>
+  </div>
+</section>
+
+
+<section id="box">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num"><span>06</span> — REDNO BOX</div>
+      <div>
+        <h2>AI асистент, който живее във вашия офис.</h2>
+        <p>Малка кутия, колкото книга. Знае вашите документи, отговаря на вашите хора и работи с програмите, с които вече работите. Данните не излизат от сградата.</p>
+      </div>
+    </div>
+
+    <div class="box-intro">
+      <figure class="box-shot rv">
+        <img src="img/redno-box.jpg" alt="REDNO BOX — малък компютър с гравирано лого redno, на бюро" loading="lazy">
+        <figcaption>REDNO BOX · сглобяваме, настройваме и поддържаме ние</figcaption>
+      </figure>
+      <div class="rv">
+        <ul class="box-list">
+          <li><b>Знае това, което знаете вие</b><span>Договори, процедури, ценоразписи, стари оферти. Търси в тях и отговаря с цитат от източника, за да проверите всеки ред.</span></li>
+          <li><b>Работи с това, което имате</b><span>Файлов сървър, имейл, ERP, таблици. Не сменяте програмите си и не качвате нищо в облак.</span></li>
+          <li><b>Питайте го на български</b><span>В чат, по имейл или в Telegram — както питате колега, без да учите нов софтуер.</span></li>
+          <li><b>Нищо не прави само</b><span>Пише чернова — изпращате вие. Всяко действие извън кутията иска вашето „да“.</span></li>
+        </ul>
+        <a href="#contact" class="btn btn-ink" style="margin-top:26px">Поискайте демонстрация</a>
+      </div>
+    </div>
+
+    <div class="box-tiers rv">
+      <div class="box-tier">
+        <h3>Start</h3>
+        <div class="who">5–15 души · един отдел</div>
+        <ul><li>Документи и търсене с цитат</li><li>Имейл чернови</li><li>До 1 000 документа</li><li>Доставка и монтаж</li></ul>
+        <div class="amt">2 900 €</div><div class="per">внедряване · после 290 €/мес.</div>
+      </div>
+      <div class="box-tier">
+        <h3>Business</h3>
+        <div class="who">15–40 души · 3–5 отдела</div>
+        <ul><li>Всичко от Start</li><li>Връзка с ERP / CRM</li><li>Права по отдели</li><li>До 5 000 документа</li></ul>
+        <div class="amt">5 900 €</div><div class="per">внедряване · после 590 €/мес.</div>
+      </div>
+      <div class="box-tier">
+        <h3>Pro</h3>
+        <div class="who">40+ души · локален модел</div>
+        <ul><li>Всичко от Business</li><li>Работа без интернет</li><li>Собствен модел в кутията</li><li>Резервна кутия при авария</li></ul>
+        <div class="amt">9 900 €</div><div class="per">внедряване · после 1 190 €/мес.</div>
+      </div>
+    </div>
+    <p class="box-note rv">Кутията, доставката и монтажът са включени в цената. Записът на резервни копия е автоматичен. Разходът за AI се вижда всеки месец в таблото — плащате го по себестойност, без надценка. След 4 години кутията се подменя за 490 €.</p>
+
+    <div class="box-sec rv">
+      <div><b>Данните остават при вас</b><p>Обработката е в кутията. Към външния AI отива само текстът на конкретния въпрос — и само ако вие разрешите.</p></div>
+      <div><b>Права по отдели</b><p>Ако Иван от продажби няма достъп до договорите на счетоводството, асистентът също не му ги показва.</p></div>
+      <div><b>Бекъп всеки ден</b><p>Архив на паметта и знанията на втори диск. Нова кутия се вдига за под час, с всичко научено.</p></div>
+      <div><b>Кой какво е правил</b><p>Пълен запис на въпросите, отговорите и отказаните действия. Месечен отчет, който се чете за пет минути.</p></div>
+    </div>
   </div>
 </section>
 
