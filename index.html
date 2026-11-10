@@ -294,6 +294,19 @@ footer a:hover{color:#fff}
 .bx-note{font-size:13.5px;color:var(--muted);margin-top:26px;max-width:78ch}
 .dark .bx-note{color:#9BA9B7}
 
+/* мост проблем → решение */
+.bridge{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:42px;border:1px solid var(--rule);background:#fff}
+.bridge > div{padding:26px 30px}
+.bridge > div + div{border-left:1px solid var(--rule);background:var(--paper2)}
+.br-tag{display:inline-block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:10px}
+.br-bad .br-tag{color:var(--muted)}
+.br-good .br-tag{color:var(--accent)}
+.bridge ul{list-style:none;font-size:15px;color:var(--body)}
+.bridge li{padding:6px 0 6px 18px;position:relative}
+.bridge li:before{content:"—";position:absolute;left:0;color:var(--rule)}
+.br-good li:before{color:var(--accent)}
+.bridge b{color:var(--ink)}
+
 .js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .js .rv.in{opacity:1;transform:none}
 
@@ -301,6 +314,8 @@ footer a:hover{color:#fff}
   .sec-head{grid-template-columns:1fr;gap:14px}
   .sec-num{border:0;padding:0}
   .facts,.three{grid-template-columns:1fr 1fr}
+  .bridge{grid-template-columns:1fr}
+  .bridge > div + div{border-left:0;border-top:1px solid var(--rule)}
   .bx-mode{grid-template-columns:1fr;gap:2px}
   .box-intro{grid-template-columns:1fr;gap:34px}
   .box-tiers{grid-template-columns:1fr}
@@ -348,7 +363,7 @@ footer a:hover{color:#fff}
     <a href="#top" class="logo"><span class="mark"><i></i><i></i><i></i></span>redno</a>
     <nav class="nav-links" id="menu">
       <a href="#problem">Проблемът</a>
-      <a href="#capabilities">Какво може</a>
+      <a href="#capabilities">Какво прави</a>
       <a href="#box">Кутията</a>
       <a href="#how">Как работим</a>
       <a href="#prices">Цени</a>
@@ -368,7 +383,7 @@ footer a:hover{color:#fff}
     <p class="sub">REDNO BOX е малък компютър, който знае вашите договори, оферти и процедури, отговаря на български и работи с програмите, с които вече работите. Данните не напускат сградата.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-fill">Поискайте демонстрация</a>
-      <a href="#capabilities" class="btn btn-line">Какво може</a>
+      <a href="#capabilities" class="btn btn-line">Какво прави</a>
     </div>
     <div class="hero-bar">
       <div><b>3–6 седмици</b><span>от първата среща до работеща кутия</span></div>
@@ -383,8 +398,8 @@ footer a:hover{color:#fff}
     <div class="sec-head rv">
       <div class="sec-num"><span>01</span> — Проблемът</div>
       <div>
-        <h2>ChatGPT знае всичко. Освен вашата фирма.</h2>
-        <p>Общият AI е умен, но е сляп за вашите цени, договори и правила. Затова отговаря общо — или ви кара да качвате документи в чужд облак, за да е полезен.</p>
+        <h2>AI знае всичко. Освен вашата фирма.</h2>
+        <p>Проблемът не е, че AI-ят е глупав. Проблемът е, че той не знае нищо за вас — нито цените ви, нито договорите, нито какво сте се разбрали с клиента вчера. Затова отговаря общо. Или ви кара да качите документите си в чужд облак, за да свърши работа.</p>
       </div>
     </div>
     <div class="facts rv">
@@ -392,17 +407,34 @@ footer a:hover{color:#fff}
       <div class="fact"><b>×N<i> абонамента</i></b><span>плащате на всеки служител, а знанието остава разпръснато по лични чатове.</span></div>
       <div class="fact"><b>100<i> %</i></b><span>от каченото в чужд чат напуска сградата. За договори и заплати това е проблем, не удобство.</span></div>
     </div>
-    <p class="small rv" style="margin-top:22px">REDNO BOX обръща посоката: знанието остава при вас, а асистентът идва при него.</p>
+    <div class="bridge rv">
+      <div class="br-bad">
+        <span class="br-tag">Как е днес</span>
+        <ul>
+          <li>Питате общ AI → той <b>не знае вашите документи</b></li>
+          <li>Качвате ги, за да помогне → <b>те напускат сградата</b></li>
+          <li>Плащате на всеки служител → <b>знанието остава в личния чат</b></li>
+        </ul>
+      </div>
+      <div class="br-good">
+        <span class="br-tag">С REDNO BOX</span>
+        <ul>
+          <li>Питате кутията → тя <b>чете вашите документи</b></li>
+          <li>Отговорът идва с цитат → <b>проверявате реда</b></li>
+          <li>Една цена за фирмата → <b>знанието остава при вас</b></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="capabilities">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="sec-num"><span>02</span> — Какво може</div>
+      <div class="sec-num"><span>02</span> — Решението</div>
       <div>
-        <h2>Шест неща, които върши всеки ден.</h2>
-        <p>Започваме с две или три, които ви губят най-много време. Останалото се добавя, когато видите, че работи.</p>
+        <h2>Какво прави REDNO BOX.</h2>
+        <p>Това е работата на кутията, не на общия AI. Започваме с две или три неща, които ви губят най-много време — останалите се добавят, когато видите, че работи.</p>
       </div>
     </div>
     <div class="three rv">
@@ -597,7 +629,7 @@ footer a:hover{color:#fff}
         <h4>На страницата</h4>
         <ul>
           <li><a href="#problem">Проблемът</a></li>
-          <li><a href="#capabilities">Какво може</a></li>
+          <li><a href="#capabilities">Какво прави</a></li>
           <li><a href="#box">Кутията</a></li>
           <li><a href="#prices">Цени</a></li>
           <li><a href="#faq">Въпроси</a></li>
