@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>REDNO BOX — AI асистент в офиса на вашата фирма · Пловдив</title>
-<meta name="description" content="REDNO BOX е малък компютър във вашия офис, който познава документите ви и отговаря на български. Документите остават при вас. Доставка, настройка и поддръжка от РЕДНО, Пловдив.">
+<meta name="description" content="REDNO BOX е малък компютър във вашия офис, който познава документите ви и отговаря на български. Данните остават при вас. РЕДНО, Пловдив.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101820'/%3E%3Crect x='14' y='16' width='30' height='9' rx='4.5' fill='%23F7F4EE'/%3E%3Crect x='14' y='29' width='22' height='9' rx='4.5' fill='%23F7F4EE'/%3E%3Crect x='14' y='42' width='14' height='9' rx='4.5' fill='%23C2410C'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,6 @@ h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;color:var(--ink);li
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
-.narrow{max-width:780px}
 .eyebrow{display:block;font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
 .lead{font-size:19.5px;color:var(--body)}
 .small{font-size:14px;color:var(--muted)}
@@ -94,36 +93,12 @@ section{padding:110px 0}
 .fact span{font-size:15px;color:var(--body)}
 
 /* photo duo */
-.duo{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--ink)}
-.duo figure{position:relative;overflow:hidden}
-.duo img{width:100%;height:520px;object-fit:cover;filter:saturate(.92)}
-.duo figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 34px 28px;background:linear-gradient(transparent,rgba(9,13,18,.9));color:#fff}
-.duo figcaption b{display:block;font-family:'Playfair Display';font-size:24px;margin-bottom:4px}
-.duo figcaption span{font-size:14.5px;color:#C6BFB2}
 
 /* before after */
-.ba{display:grid;grid-template-columns:1fr 1fr;gap:60px}
-.ba h3{font-size:22px;margin-bottom:22px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-.ba h3 span{font-family:'Onest';font-size:13px;font-weight:600;padding:4px 10px;border-radius:2px}
-.ba-before h3 span{background:#F0DDD6;color:#9A3412}
-.ba-after h3 span{background:#D8EAE6;color:var(--teal)}
-.ba-row{display:grid;grid-template-columns:58px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--rule);font-size:15.5px}
-.ba-row b{font-family:'Playfair Display';color:var(--ink);font-size:15px;font-weight:700}
-.ba-total{margin-top:20px;padding-top:16px;border-top:2px solid var(--ink);font-family:'Playfair Display';font-size:20px;color:var(--ink)}
 
 /* calc */
-.calc{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(255,255,255,.16)}
-.calc-in{padding:44px}
-.calc-out{padding:44px;background:rgba(255,255,255,.04);border-left:1px solid rgba(255,255,255,.16);display:flex;flex-direction:column;justify-content:center}
-.calc-f{margin-bottom:30px}
-.calc-f label{display:flex;justify-content:space-between;align-items:baseline;font-size:15px;color:#D6DEE6;margin-bottom:14px}
-.calc-f output{font-family:'Playfair Display';font-size:22px;color:var(--accent-l);font-weight:700}
 input[type=range]{-webkit-appearance:none;width:100%;height:2px;background:rgba(255,255,255,.28);cursor:pointer}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--accent);border:3px solid var(--ink);box-shadow:0 0 0 1px var(--accent)}
-.calc-out .big{font-family:'Playfair Display';font-size:clamp(44px,5.4vw,66px);color:#fff;line-height:1;font-weight:700}
-.calc-out .lbl{font-size:15px;color:#A9B4BF;margin:10px 0 26px}
-.calc-out .row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid rgba(255,255,255,.12);font-size:15px}
-.calc-out .row b{color:#fff;font-weight:600;text-align:right}
 
 /* letter */
 .letter{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:start}
@@ -171,39 +146,16 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
 
 
 /* info popups */
-.info{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;margin-left:7px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);background:transparent;font-family:'Onest';font-style:normal;font-size:10.5px;font-weight:700;line-height:1;cursor:pointer;position:relative;vertical-align:middle;padding:0;transition:.15s}
-.info:hover,.info:focus{background:var(--accent);color:#fff;outline:none}
-.info:after{content:attr(data-tip);position:absolute;left:-8px;bottom:calc(100% + 10px);width:255px;background:var(--ink);color:#EDE7DC;font-family:'Onest';font-size:12.5px;font-weight:400;line-height:1.5;letter-spacing:0;text-align:left;padding:11px 13px;border-radius:7px;box-shadow:0 14px 34px rgba(16,24,32,.25);opacity:0;visibility:hidden;transform:translateY(4px);transition:.18s;z-index:30;pointer-events:none;white-space:normal}
-.info:before{content:"";position:absolute;left:6px;bottom:calc(100% + 3px);border:6px solid transparent;border-top-color:var(--ink);opacity:0;visibility:hidden;transition:.18s;z-index:31}
-.info:hover:after,.info:focus:after,.info.open:after,.info:hover:before,.info:focus:before,.info.open:before{opacity:1;visibility:visible;transform:none}
-.prow.star .info{border-color:var(--accent-l);color:var(--accent-l)}
-.prow.star .info:hover{background:var(--accent-l);color:var(--ink)}
-@media(max-width:720px){
-  .info:after{width:min(255px,calc(100vw - 56px));left:-6px}
-}
 
-.tipkey{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);font-size:10px;font-weight:700;line-height:1;vertical-align:-2px;margin:0 2px}
+
 
 /* misc grids */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:60px}
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;border-top:1px solid var(--rule);padding-top:34px}
 .three h3{font-size:20px;margin-bottom:8px}
 .three p{font-size:15.5px}
-.industries{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
-.ind{display:grid;grid-template-columns:1fr auto;gap:18px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.14);align-items:baseline}
-.ind b{font-family:'Playfair Display';font-size:19px;color:#fff;font-weight:600}
-.ind span{font-size:14.5px;color:#A9B4BF;text-align:right;max-width:32ch}
 
 /* fit */
-.fit{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--ink)}
-.fit > div{padding:34px 34px 34px 0}
-.fit > div + div{border-left:1px solid var(--rule);padding-left:44px}
-.fit h3{font-size:21px;margin-bottom:16px}
-.fit ul{list-style:none}
-.fit li{padding:11px 0 11px 26px;position:relative;font-size:16px;border-bottom:1px solid var(--rule)}
-.fit li:last-child{border:0}
-.fit-yes li:before{content:"+";position:absolute;left:0;color:var(--teal);font-weight:700;font-size:18px}
-.fit-no li:before{content:"−";position:absolute;left:0;color:var(--accent);font-weight:700;font-size:18px}
 
 /* faq */
 .faq{border-top:1px solid var(--ink);max-width:900px}
@@ -322,9 +274,7 @@ footer a:hover{color:#fff}
   .box-tier{border-left:0;border-top:1px solid var(--rule);padding-left:0}
   .box-sec{grid-template-columns:1fr 1fr}
   .fact:nth-child(2){border-right:0}
-  .duo{grid-template-columns:1fr}
-  .duo img{height:360px}
-  .ba,.two,.letter,.calc,.contact-grid,.fit,.dl,.industries{grid-template-columns:1fr;gap:34px}
+  .two,.letter,.contact-grid,.dl{grid-template-columns:1fr;gap:34px}
   .letter .pic{order:-1}
   .contact-left{padding:70px 0 40px}
   .contact-right{padding:0 0 70px}
@@ -334,9 +284,6 @@ footer a:hover{color:#fff}
   .row p{grid-column:2}
   .prow{grid-template-columns:1fr;gap:12px}
   .prow .price{text-align:left}
-  .ind{grid-template-columns:1fr}
-  .ind span{text-align:left}
-  .fit > div + div{border-left:0;border-top:1px solid var(--rule);padding-left:0;padding-top:34px}
 }
 @media(max-width:720px){
   body{font-size:16px}
